@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>crm_address</Name>
+  <ID>tbl_crm_address</ID>
+  <Columns>
+    <Column name="customer_id" id="tblCol_4dd237385ccf4ed3ac615477f3749204" index="0" datatype="Integer" />
+    <Column name="address_id" id="tblCol_f4e14d594f91455b9808d3c402ad15db" index="1" datatype="Integer" />
+    <Column name="street_address_1" id="tblCol_4b59094abad14e58800f09d023764898" index="2" datatype="Text" />
+    <Column name="street_address_2" id="tblCol_da547a03ded44c0c8d5059a6ebb10362" index="3" datatype="Text" />
+    <Column name="city" id="tblCol_a3466a6ec3394b63b55f650d6272c507" index="4" datatype="Text" />
+    <Column name="zip" id="tblCol_5d35f1a0521b4ce3b057017c79824302" index="5" datatype="Text" />
+    <Column name="state" id="tblCol_faff8f3381bc46a7b778b0e9d04d8175" index="6" datatype="Text" />
+    <Column name="country" id="tblCol_11197a120e264e14a565df8f5635d616" index="7" datatype="Text" />
+  </Columns>
+  <IndexesList>
+    <Index id="1" pk="true" unique="true" instanceOnly="true" columnsIdsList="tblCol_4dd237385ccf4ed3ac615477f3749204,tblCol_f4e14d594f91455b9808d3c402ad15db" />
+  </IndexesList>
+  <EnrichmentList />
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+</TableObject>

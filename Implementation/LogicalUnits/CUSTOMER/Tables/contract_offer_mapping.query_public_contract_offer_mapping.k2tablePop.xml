@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ID>query_public_contract_offer_mapping</ID>
+  <PopulationObjectName>query_public_contract_offer_mapping</PopulationObjectName>
+  <TableName>contract_offer_mapping</TableName>
+  <RootItemID>query_query_public_contract_offer_mapping</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>true</SimpleObject>
+  <IidFinderProp />
+  <InputArguments>
+    <Arg name="contract_ref_id" id="queryCol_0" dataType="Integer" index="0" />
+    <Arg name="order_ref_id" id="queryCol_1" dataType="Integer" index="1" />
+    <Arg name="offer_contract_description" id="queryCol_2" dataType="Text" index="2" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="DBQueryDataSave" id="query_query_public_contract_offer_mapping" name="query_public_contract_offer_mapping" nodeOrder="0" module="DBQuery" mapObjectModule="DBQuery" connName="CRM_DB">
+      <OutputsList>
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_0" name="contract_ref_id" dataType="Integer" index="0" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_1" name="order_ref_id" dataType="Integer" index="1" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_2" name="offer_contract_description" dataType="Text" index="2" />
+      </OutputsList>
+      <SQL><![CDATA[SELECT * FROM public.contract_offer_mapping]]></SQL>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="10" fromNodeOrder="0" fromItemID="query_query_public_contract_offer_mapping" fromColID="queryCol_0" toItemID="tbl_contract_offer_mapping" toColID="tblCol_c0034565c579499e966b30497e65ed34" />
+    <Link partId="11" fromNodeOrder="0" fromItemID="query_query_public_contract_offer_mapping" fromColID="queryCol_1" toItemID="tbl_contract_offer_mapping" toColID="tblCol_da2a15b4237a4f2f98432fb7650ae97e" />
+    <Link partId="12" fromNodeOrder="0" fromItemID="query_query_public_contract_offer_mapping" fromColID="queryCol_2" toItemID="tbl_contract_offer_mapping" toColID="tblCol_ee97fce2a67647698e26c53071e2d61e" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="contract_offer_mapping.query_public_contract_offer_mapping.k2tablePop.xml" lastPartID="12">
+      <TableNode partID="0" name="contract_offer_mapping" pos="383 5.854168" width="252.999985" />
+      <DBQueryNode partID="6" name="CRM_DB" pos="10 0.890625" size="253 96.21875" isRoot="true">
+        <DBQuery>{"Name":"query_public_contract_offer_mapping","ID":"query_query_public_contract_offer_mapping","ConnName":"CRM_DB","SQL":"SELECT * FROM public.contract_offer_mapping","ColumnsList":[{"ID":"queryCol_0","Name":"contract_ref_id","DataType":"Integer","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"order_ref_id","DataType":"Integer","Index":1,"IsInputArgument":true},{"ID":"queryCol_2","Name":"offer_contract_description","DataType":"Text","Index":2,"IsInputArgument":true}]}</DBQuery>
+      </DBQueryNode>
+      <Link partID="10" from="0" to="1" pointsArr="263 36.9270859 273 36.9270859 313 37 333 37 373 36.890625 383 36.890625" fromNodePartID="6" fromNodeColumnName="contract_ref_id" toNodePartID="0" toNodeColumnName="contract_ref_id" />
+      <Link partID="11" from="2" to="3" pointsArr="263 49 273 49 313 49 333 49 373 48.9635429 383 48.9635429" fromNodePartID="6" fromNodeColumnName="order_ref_id" toNodePartID="0" toNodeColumnName="order_ref_id" />
+      <Link partID="12" from="4" to="5" pointsArr="263 61.0729141 273 61.0729141 313 61 333 61 373 61.0364571 383 61.0364571" fromNodePartID="6" fromNodeColumnName="offer_contract_description" toNodePartID="0" toNodeColumnName="offer_contract_description" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DBConn xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="DBConnFabricLocal" name="dbFabric" type="FabricLocal" version="5.0.1.7">
+  <Active>true</Active>
+  <UserId>admin</UserId>
+  <Password>QADdQsv9zjJ0akmAM7oJ2F0lizDtEpF4JtOm7Ri3H3Y=:49Q/E6olOBrJbB35oQEWuje4hlK3nifmsMXiCUnDj+8=</Password>
+  <ConnectionStringClient>urls=&lt;HOST&gt;:5124;user=admin;password=[PASSWORD]</ConnectionStringClient>
+  <MinConnectionsNumber>0</MinConnectionsNumber>
+  <MaxConnectionsNumber>0</MaxConnectionsNumber>
+  <UseSelectAsteriskInAutoCreatedQueries>true</UseSelectAsteriskInAutoCreatedQueries>
+  <CommandList />
+  <DBSourceList />
+</DBConn>

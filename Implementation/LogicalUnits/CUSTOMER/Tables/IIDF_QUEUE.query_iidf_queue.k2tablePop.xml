@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>query_iidf_queue</ID>
+  <PopulationObjectName>query_iidf_queue</PopulationObjectName>
+  <TableName>IIDF_QUEUE</TableName>
+  <RootItemID>f_30</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>false</SimpleObject>
+  <IidFinderProp />
+  <InputArguments>
+    <Arg name="IID" id="fi_30.0" dataType="String" index="0" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="FunctionDiagramItemDataSave" id="f_30" name="fnIIDFPopTable" nodeOrder="0" module="Function" mapObjectModule="Function" fileName="fnIIDFPopTable.k2function.xml">
+      <InputsList>
+        <Input id="fi_30.0" name="IID" />
+      </InputsList>
+      <OutputsList>
+        <Output id="fo_30.0" name="IID" />
+      </OutputsList>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="10" fromNodeOrder="0" fromItemID="f_30" fromColID="fo_30.0" toItemID="tbl_IIDF_QUEUE" toColID="tblCol_8b9da9b5d9854890841140ed4ffea5cf" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="IIDF_QUEUE.query_iidf_queue.k2tablePop.xml" lastPartID="113">
+      <TableNode partID="0" name="IIDF_QUEUE" pos="208.837723 24.81771" width="309.782532" />
+      <FunctionMapNode id="0" L0="1" R0="2" partID="30" topLabel="fnIIDFPopTable (30)" pos="10.003747 52.4544258" size="154.288712 45.0911446" isRoot="true">
+        <KFunction>{"Name":"fnIIDFPopTable","ID":"f_30","Category":"IIDF","FunctionLevel":0,"FunctionType":0,"FunctionType2":1,"RegisterAsLuDbFunction":false,"SaveToDLUR":false,"ApiFunction":false,"DecisionFunction":false,"RequiresLuReference":false,"Desc":"","Language":1,"IsRootFunction":true,"inputParams":[{"Name":"IID","ID":"fi_30.0","Index":0,"DataType":"String"}],"outputParams":[{"Name":"IID","ID":"fo_30.0","Index":0,"DataType":"String","Comment":""}],"HideMethodInUi":false}</KFunction>
+      </FunctionMapNode>
+      <Link partID="10" from="2" to="3" pointsArr="164.292465 77.54557 174.292465 77.54557 198.837723 67.9270859 208.837723 67.9270859" fromNodePartID="30" fromNodeColumnName="IID" toNodePartID="0" toNodeColumnName="IID" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

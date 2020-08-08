@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>query_iidf_recent_updates</ID>
+  <PopulationObjectName>query_iidf_recent_updates</PopulationObjectName>
+  <TableName>IIDF_RECENT_UPDATES</TableName>
+  <RootItemID>f_75</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>false</SimpleObject>
+  <IidFinderProp />
+  <InputArguments>
+    <Arg name="IID" id="fi_75.0" dataType="String" index="0" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="FunctionDiagramItemDataSave" id="f_75" name="fnIIDFPopRecentDummy" nodeOrder="0" module="Function" mapObjectModule="Function" fileName="fnIIDFPopRecentDummy.k2function.xml">
+      <InputsList>
+        <Input id="fi_75.0" name="IID" />
+      </InputsList>
+      <OutputsList>
+        <Output id="fo_75.0" name="IID" />
+      </OutputsList>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="78" fromNodeOrder="0" fromItemID="f_75" fromColID="fo_75.0" toItemID="tbl_IIDF_RECENT_UPDATES" toColID="tblCol_7abd5e73f28a4aed9bdcfa98a6292e4f" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="IIDF_RECENT_UPDATES.query_iidf_recent_updates.k2tablePop.xml" lastPartID="89">
+      <TableNode partID="0" name="IIDF_RECENT_UPDATES" pos="236.855469 6.70834351" width="309.324219" />
+      <FunctionMapNode id="0" L0="1" R0="2" partID="75" topLabel="fnIIDFPopRecentDummy (75)" pos="10.0000153 27.4544258" size="181.855438 45.0911446" isRoot="true">
+        <KFunction>{"Name":"fnIIDFPopRecentDummy","ID":"f_75","Category":"IIDF","FunctionLevel":0,"FunctionType":0,"FunctionType2":1,"RegisterAsLuDbFunction":false,"SaveToDLUR":false,"ApiFunction":false,"DecisionFunction":false,"RequiresLuReference":false,"Desc":"","Language":1,"IsRootFunction":true,"inputParams":[{"Name":"IID","ID":"fi_75.0","Index":0,"DataType":"String"}],"outputParams":[{"Name":"IID","ID":"fo_75.0","Index":0,"DataType":"String","Comment":""}],"HideMethodInUi":false}</KFunction>
+      </FunctionMapNode>
+      <Link partID="78" from="2" to="3" pointsArr="170.424362 52.54557 180.424362 52.54557 226.855469 37.7448 236.855469 37.7448" fromNodePartID="75" fromNodeColumnName="IID" toNodePartID="0" toNodeColumnName="IID" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

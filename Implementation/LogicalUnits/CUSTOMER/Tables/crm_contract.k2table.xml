@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>crm_contract</Name>
+  <ID>tbl_crm_contract</ID>
+  <Columns>
+    <Column name="customer_id" id="tblCol_45ba939711914f04a6e5091e81bda9ba" index="0" datatype="Integer" />
+    <Column name="contract_id" id="tblCol_4497f1117050484d9cbac5c12d931bbf" index="1" datatype="Integer" />
+    <Column name="contract_ref_id" id="tblCol_63089d2e8e0a4c1b86f2141b59801d0f" index="2" datatype="Integer" />
+    <Column name="associated_line" id="tblCol_829f859fc1f141dbabb32fef69c45418" index="3" datatype="Text" />
+    <Column name="contract_description" id="tblCol_6b767596322a4ed8895d32dfc5c1595c" index="4" datatype="Text" />
+    <Column name="from_date" id="tblCol_de4c7b35eff04584ba1df0c932d03b8a" index="5" datatype="Text" />
+    <Column name="to_date" id="tblCol_2c7e18d3d7b64cb9a5f177c06a079b2a" index="6" datatype="Text" />
+    <Column name="associated_line_fmt" id="tblCol_500be693b0ec449d9d2f178ff0e598d0" index="7" datatype="Text" />
+  </Columns>
+  <IndexesList>
+    <Index id="1" pk="true" unique="true" instanceOnly="true" columnsIdsList="tblCol_4497f1117050484d9cbac5c12d931bbf" />
+  </IndexesList>
+  <EnrichmentList />
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+</TableObject>

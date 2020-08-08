@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ID>query_IIDF</ID>
+  <PopulationObjectName>query_IIDF</PopulationObjectName>
+  <TableName>IIDF</TableName>
+  <RootItemID>f_5</RootItemID>
+  <Mode>Upsert</Mode>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>false</SimpleObject>
+  <IidFinderProp />
+  <InputArguments>
+    <Arg name="IID" id="fi_5.0" dataType="String" index="0" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="FunctionDiagramItemDataSave" id="f_5" name="fnIIDFConsMsgs" nodeOrder="0" module="Function" mapObjectModule="Function" fileName="fnIIDFConsMsgs.k2function.xml">
+      <InputsList>
+        <Input id="fi_5.0" name="IID" />
+      </InputsList>
+      <OutputsList>
+        <Output id="fo_5.0" name="IID" />
+        <Output id="fo_5.1" name="MAX_DC_UPDATE" />
+      </OutputsList>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="12" fromNodeOrder="0" fromItemID="f_5" fromColID="fo_5.0" toItemID="tbl_IIDF" toColID="tblCol_55bbb1eee3034c8d891320b17f47d7f1" />
+    <Link partId="13" fromNodeOrder="0" fromItemID="f_5" fromColID="fo_5.1" toItemID="tbl_IIDF" toColID="tblCol_f500e26d4ef942a2a13a0251dac4d1a2" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="IIDF.query_IIDF.k2tablePop.xml" lastPartID="20">
+      <TableNode partID="0" name="IIDF" pos="404 30" width="253" />
+      <FunctionMapNode id="0" L0="1" R0="2" R1="3" partID="5" topLabel="fnIIDFConsMsgs (5)" pos="95.91544 53.1923943" size="214.138428 58.51119" isRoot="true">
+        <KFunction>{"Name":"fnIIDFConsMsgs","ID":"f_5","Category":"IIDF","Version":"6.1.0.17","FunctionLevel":0,"FunctionType2":1,"ReturnType":"void","RegisterAsLuDbFunction":false,"DecisionFunction":false,"RequiresLuReference":false,"Desc":"","Language":1,"FunctionBody":"","IsRootFunction":true,"inputParams":[{"Name":"IID","ID":"fi_5.0","Index":0,"DataType":"String","Comment":""}],"outputParams":[{"Name":"IID","ID":"fo_5.0","Index":0,"DataType":"String","Comment":""},{"Name":"MAX_DC_UPDATE","ID":"fo_5.1","Index":1,"DataType":"Long","Comment":""}],"HideMethodInUi":false}</KFunction>
+      </FunctionMapNode>
+      <Link partID="12" from="2" to="4" pointsArr="310.053864 78.95711 320.053864 78.95711 394 61.0364571 404 61.0364571" fromNodePartID="5" fromNodeColumnName="IID" toNodePartID="0" toNodeColumnName="IID" />
+      <Link partID="13" from="3" to="5" pointsArr="310.053864 91.03002 320.053864 91.03002 394 73.109375 404 73.109375" fromNodePartID="5" fromNodeColumnName="MAX_DC_UPDATE" toNodePartID="0" toNodeColumnName="MAX_DC_UPDATE" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

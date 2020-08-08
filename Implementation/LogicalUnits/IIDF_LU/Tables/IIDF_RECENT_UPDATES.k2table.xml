@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>IIDF_RECENT_UPDATES</Name>
+  <ID>tbl_IIDF_RECENT_UPDATES</ID>
+  <Columns>
+    <Column name="IID" id="tblCol_7abd5e73f28a4aed9bdcfa98a6292e4f" index="0" datatype="text" />
+    <Column name="SQL" id="tblCol_59df43d5a3e2418caf7ad25d61d7935c" index="1" datatype="text" />
+    <Column name="VAL_ARRAY" id="tblCol_4cf8d939fe0d4c6bae782f072ff22844" index="2" datatype="text" />
+    <Column name="OP_TIMESTAMP" id="tblCol_d6954a04c6a44ed5828d22fbe50d4f19" index="3" datatype="text" />
+    <Column name="CURRENT_TIMESTAMP" id="tblCol_6c53b6d7e973448b96d77e8a10e0385f" index="4" datatype="text" />
+    <Column name="DATE" id="tblCol_a1ef7a1baf4741d985ea00efbdcf0db0" index="5" datatype="Text" />
+    <Column name="OP_CURRENT_TIMESTAMP" id="tblCol_785fda04806742ff88aac6b6bfd2fb52" index="6" datatype="text" />
+  </Columns>
+  <IndexesList>
+    <Index id="1" unique="true" instanceOnly="true" columnsIdsList="tblCol_7abd5e73f28a4aed9bdcfa98a6292e4f,tblCol_59df43d5a3e2418caf7ad25d61d7935c,tblCol_4cf8d939fe0d4c6bae782f072ff22844" />
+  </IndexesList>
+  <EnrichmentList />
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+</TableObject>

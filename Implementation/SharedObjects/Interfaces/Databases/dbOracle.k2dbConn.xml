@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DBConn xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="DBConnOracle" name="dbOracle" type="Oracle" version="6.1.3.1">
+  <Active>true</Active>
+  <DataSource>10.21.2.28</DataSource>
+  <PortNum>1521</PortNum>
+  <DataBase>oracle</DataBase>
+  <UserId>HIS_USER</UserId>
+  <Password>lm15cNYr3WNlzjID+1v0+BgDGvXCUd6JrAhRaSELnV0=:TZghmCNNrvRvy8Pp5ePPG7hIKCMVBZgbyX2oYG+feEU=</Password>
+  <ConnectionStringClient>Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=10.21.2.28)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=oracle)));User Id=HIS_USER;Password=[PASSWORD];</ConnectionStringClient>
+  <ConnectionStringServerSide>jdbc:oracle:thin:@10.21.2.28:1521/oracle</ConnectionStringServerSide>
+  <MinConnectionsNumber>0</MinConnectionsNumber>
+  <MaxConnectionsNumber>60</MaxConnectionsNumber>
+  <SchemaFilter>HIS_USER</SchemaFilter>
+  <UseSelectAsteriskInAutoCreatedQueries>true</UseSelectAsteriskInAutoCreatedQueries>
+  <CommandList />
+</DBConn>

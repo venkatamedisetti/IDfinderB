@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>IIDF_STATISTICS</Name>
+  <ID>tbl_IIDF_STATISTICS</ID>
+  <Columns>
+    <Column name="LU_NAME" id="tblCol_32c3361e5002417abc416705ef194ce1" index="0" datatype="text" />
+    <Column name="IID" id="tblCol_624e98074ce14f8b9983395f84854dd7" index="1" datatype="text" />
+    <Column name="TABLE_NAME" id="tblCol_d614daba865643218dad62532703cddf" index="2" datatype="text" />
+    <Column name="TOTAL_INSERT" id="tblCol_74d53e25e0c448f7ae29741156fa345c" index="3" datatype="integer" />
+    <Column name="TOTAL_DELETE" id="tblCol_86afff4187fc47c493f5e429101187fb" index="4" datatype="integer" />
+    <Column name="TOTAL_UPDATE" id="tblCol_3df96e0608594770a1d2e1de622583d6" index="5" datatype="integer" />
+    <Column name="TOTAL_IIDCHANGE" id="tblCol_e3138be0dd464464b936b9a66ffc11a0" index="6" datatype="integer" />
+    <Column name="TOTAL_REPLICATE" id="tblCol_51a404680aca497cab7b3bb42edaeb98" index="7" datatype="integer" />
+    <Column name="LAST_EXECUTION_TIME" id="tblCol_f677d678cc9342f8a166269676e904ec" index="8" datatype="text" />
+  </Columns>
+  <IndexesList>
+    <Index id="1" pk="true" unique="true" instanceOnly="true" columnsIdsList="tblCol_32c3361e5002417abc416705ef194ce1,tblCol_624e98074ce14f8b9983395f84854dd7,tblCol_d614daba865643218dad62532703cddf" />
+  </IndexesList>
+  <EnrichmentList />
+  <LazyDataUpdate syncMethod="None" performEvery="1.00:00:00" syncWaitTimeout="60">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+</TableObject>

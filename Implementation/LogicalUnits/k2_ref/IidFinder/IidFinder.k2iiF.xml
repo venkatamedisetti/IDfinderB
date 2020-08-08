@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Staging XML file for the iidFinder usage-->
+<lu name="K2_REF" keyspace="common">
+		<table dbInterface="dbOracle" name="MEDICATION_ALLERGY_INFO" keyspace="HIS_USER" key="ALERGY_ID" luid="ALERGY_ID" stored="false"/>
+</lu>

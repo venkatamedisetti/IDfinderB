@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ID>query_public_balance</ID>
+  <PopulationObjectName>query_public_balance</PopulationObjectName>
+  <TableName>crm_balance</TableName>
+  <RootItemID>query_query_public_balance</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>true</SimpleObject>
+  <IidFinderProp />
+  <InputArguments>
+    <Arg name="subscriber_id" id="queryCol_0" dataType="Integer" index="0" />
+    <Arg name="balance_id" id="queryCol_1" dataType="Integer" index="1" />
+    <Arg name="balance_ref_id" id="queryCol_2" dataType="Integer" index="2" />
+    <Arg name="available_amount" id="queryCol_3" dataType="Integer" index="3" />
+    <Arg name="reset_amount" id="queryCol_4" dataType="Integer" index="4" />
+    <Arg name="reset_date" id="queryCol_5" dataType="Text" index="5" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="DBQueryDataSave" id="query_query_public_balance" name="query_public_balance" nodeOrder="0" module="DBQuery" mapObjectModule="DBQuery" connName="CRM_DB">
+      <OutputsList>
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_0" name="subscriber_id" dataType="Integer" index="0" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_1" name="balance_id" dataType="Integer" index="1" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_2" name="balance_ref_id" dataType="Integer" index="2" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_3" name="available_amount" dataType="Integer" index="3" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_4" name="reset_amount" dataType="Integer" index="4" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_5" name="reset_date" dataType="Text" index="5" />
+      </OutputsList>
+      <SQL><![CDATA[SELECT * FROM public.balance]]></SQL>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="16" fromNodeOrder="0" fromItemID="query_query_public_balance" fromColID="queryCol_0" toItemID="tbl_crm_balance" toColID="tblCol_ddbe1203b3104f1cb34b7a5d96b0d652" />
+    <Link partId="17" fromNodeOrder="0" fromItemID="query_query_public_balance" fromColID="queryCol_1" toItemID="tbl_crm_balance" toColID="tblCol_a3066980475d462ea7b2b85e190951b6" />
+    <Link partId="18" fromNodeOrder="0" fromItemID="query_query_public_balance" fromColID="queryCol_2" toItemID="tbl_crm_balance" toColID="tblCol_29f9cdbc093542ac89ae9f2f9574b820" />
+    <Link partId="19" fromNodeOrder="0" fromItemID="query_query_public_balance" fromColID="queryCol_3" toItemID="tbl_crm_balance" toColID="tblCol_df28cfe860eb44a0a8bd6ca25cb5f01f" />
+    <Link partId="20" fromNodeOrder="0" fromItemID="query_query_public_balance" fromColID="queryCol_4" toItemID="tbl_crm_balance" toColID="tblCol_21984b603e744a5aae5f7c2064f34bb8" />
+    <Link partId="21" fromNodeOrder="0" fromItemID="query_query_public_balance" fromColID="queryCol_5" toItemID="tbl_crm_balance" toColID="tblCol_ff33cb2fa45e4aaa9afceb27cb6a088d" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="crm_balance.query_public_balance.k2tablePop.xml" lastPartID="21">
+      <TableNode partID="0" name="crm_balance" pos="383 5.74479675" width="252.999985" />
+      <DBQueryNode partID="9" name="CRM_DB" pos="10 0.78125" size="253 132.4375" isRoot="true">
+        <DBQuery>{"Name":"query_public_balance","ID":"query_query_public_balance","ConnName":"CRM_DB","SQL":"SELECT * FROM public.balance","ColumnsList":[{"ID":"queryCol_0","Name":"subscriber_id","DataType":"Integer","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"balance_id","DataType":"Integer","Index":1,"IsInputArgument":true},{"ID":"queryCol_2","Name":"balance_ref_id","DataType":"Integer","Index":2,"IsInputArgument":true},{"ID":"queryCol_3","Name":"available_amount","DataType":"Integer","Index":3,"IsInputArgument":true},{"ID":"queryCol_4","Name":"reset_amount","DataType":"Integer","Index":4,"IsInputArgument":true},{"ID":"queryCol_5","Name":"reset_date","DataType":"Text","Index":5,"IsInputArgument":true}]}</DBQuery>
+      </DBQueryNode>
+      <Link partID="16" from="0" to="1" pointsArr="263 36.81771 273 36.81771 313 37 333 37 373 36.7812538 383 36.7812538" fromNodePartID="9" fromNodeColumnName="subscriber_id" toNodePartID="0" toNodeColumnName="subscriber_id" />
+      <Link partID="17" from="2" to="3" pointsArr="263 48.890625 273 48.890625 313 49 333 49 373 48.85417 383 48.85417" fromNodePartID="9" fromNodeColumnName="balance_id" toNodePartID="0" toNodeColumnName="balance_id" />
+      <Link partID="18" from="4" to="5" pointsArr="263 60.96354 273 60.96354 313 61 333 61 373 60.9270859 383 60.9270859" fromNodePartID="9" fromNodeColumnName="balance_ref_id" toNodePartID="0" toNodeColumnName="balance_ref_id" />
+      <Link partID="19" from="6" to="7" pointsArr="263 73.03645 273 73.03645 313 73 333 73 373 73 383 73" fromNodePartID="9" fromNodeColumnName="available_amount" toNodePartID="0" toNodeColumnName="available_amount" />
+      <Link partID="20" from="8" to="9" pointsArr="263 85.109375 273 85.109375 313 85 333 85 373 85.0729141 383 85.0729141" fromNodePartID="9" fromNodeColumnName="reset_amount" toNodePartID="0" toNodeColumnName="reset_amount" />
+      <Link partID="21" from="10" to="11" pointsArr="263 97.18228 273 97.18228 313 97 333 97 373 97.14583 383 97.14583" fromNodePartID="9" fromNodeColumnName="reset_date" toNodePartID="0" toNodeColumnName="reset_date" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

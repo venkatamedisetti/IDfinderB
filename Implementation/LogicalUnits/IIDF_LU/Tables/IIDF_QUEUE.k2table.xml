@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>IIDF_QUEUE</Name>
+  <ID>tbl_IIDF_QUEUE</ID>
+  <Columns>
+    <Column name="DATA_CHANGE" id="tblCol_ac0b7db28975436d989cd41b34dd7987" index="0" datatype="text" />
+    <Column name="IID" id="tblCol_8b9da9b5d9854890841140ed4ffea5cf" index="1" datatype="text" />
+    <Column name="OPT_TIMESTAMP" id="tblCol_cb2e45f16ee847368c7a7cd5b89b69f5" index="2" datatype="text" />
+    <Column name="CURRENT_TIMESTAMP" id="tblCol_7739ea38b00d4b768afc9afdbff97e64" index="3" datatype="text" />
+    <Column name="POS" id="tblCol_06644f873eac432b9d48e7a15012b56d" index="4" datatype="text" />
+  </Columns>
+  <IndexesList>
+    <Index id="1" instanceOnly="true" columnsIdsList="tblCol_cb2e45f16ee847368c7a7cd5b89b69f5,tblCol_06644f873eac432b9d48e7a15012b56d" />
+  </IndexesList>
+  <EnrichmentList />
+  <LazyDataUpdate syncMethod="TimeInterval" performEvery="00:00:10">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+</TableObject>

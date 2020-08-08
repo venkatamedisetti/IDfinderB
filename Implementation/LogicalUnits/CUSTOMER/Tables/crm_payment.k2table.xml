@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>crm_payment</Name>
+  <ID>tbl_crm_payment</ID>
+  <Columns>
+    <Column name="invoice_id" id="tblCol_5de0ac5e5ff24871b29bdc18933a0872" index="0" datatype="Integer" />
+    <Column name="payment_id" id="tblCol_d42a58fb9e754c90a1ff5176b9642acc" index="1" datatype="Integer" />
+    <Column name="issued_date" id="tblCol_a1d98f65b9844be991723b2ca8b1fbaf" index="2" datatype="Text" />
+    <Column name="status" id="tblCol_614b2b8ff42d44b59262e040be483b82" index="3" datatype="Text" />
+    <Column name="amount" id="tblCol_b0a24eb5854d49c7a8e6e53a5d6e6ef1" index="4" datatype="Text" />
+  </Columns>
+  <IndexesList>
+    <Index id="1" pk="true" unique="true" instanceOnly="true" columnsIdsList="tblCol_d42a58fb9e754c90a1ff5176b9642acc" />
+  </IndexesList>
+  <EnrichmentList />
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+</TableObject>

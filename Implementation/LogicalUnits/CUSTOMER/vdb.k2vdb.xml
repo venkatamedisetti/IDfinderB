@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VirtualDB xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="6.1.1.5">
+  <Name>vdb</Name>
+  <RootView>crm_customer</RootView>
+  <LuLazyDataUpdate syncMethod="None" performEvery="1.00:00:00" />
+  <IidFinderProp>
+    <OrderValidationTime>00:05:00</OrderValidationTime>
+    <HistoryStoreTime>7.00:00:00</HistoryStoreTime>
+    <DeltaSyncMethod>TimeInterval</DeltaSyncMethod>
+    <DeltaSyncTimeInterval>00:00:00</DeltaSyncTimeInterval>
+  </IidFinderProp>
+  <Tables>
+    <Table>collection_collection</Table>
+    <Table>crm_activity</Table>
+    <Table>crm_address</Table>
+    <Table>crm_balance</Table>
+    <Table>crm_case_note</Table>
+    <Table>crm_cases</Table>
+    <Table>crm_contract</Table>
+    <Table>crm_customer</Table>
+    <Table>crm_invoice</Table>
+    <Table>crm_payment</Table>
+    <Table>crm_subscriber</Table>
+    <Table>orders_orders</Table>
+  </Tables>
+  <TablesProperties>
+    <TableProperties name="collection_collection">
+      <Populations>
+        <Population id="query_public_collection" name="query_public_collection" order="2" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="crm_activity">
+      <Populations>
+        <Population id="query_public_activity" name="query_public_activity" order="2" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="crm_address">
+      <Populations>
+        <Population id="query_public_address" name="query_public_address" order="2" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="crm_balance">
+      <Populations>
+        <Population id="query_public_balance" name="query_public_balance" order="4" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="crm_cases">
+      <Populations>
+        <Population id="query_public_cases" name="query_public_cases" order="3" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="crm_case_note">
+      <Populations>
+        <Population id="query_public_case_note" name="query_public_case_note" order="4" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="crm_contract">
+      <Populations>
+        <Population id="query_public_contract" name="query_public_contract" order="2" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="crm_customer">
+      <Populations>
+        <Population id="query_public_customer" name="query_public_customer" order="1" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="crm_invoice">
+      <Populations>
+        <Population id="query_public_invoice" name="query_public_invoice" order="4" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="crm_payment">
+      <Populations>
+        <Population id="query_public_payment" name="query_public_payment" order="5" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="crm_subscriber">
+      <Populations>
+        <Population id="query_public_subscriber" name="query_public_subscriber" order="3" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="orders_orders">
+      <Populations>
+        <Population id="query_public_orders" name="query_public_orders" order="3" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+  </TablesProperties>
+  <EnrichmentsOrderList />
+  <ReferencesList />
+  <Relations />
+  <DatabaseRelations>
+    <Relation>
+      <From tableType="TableObject" table="crm_customer" column="customer_id" columnId="tblCol_9efca0300bfc44a5aafcac62b061f191" />
+      <To tableType="TableObject" table="crm_contract" populationObjectName="query_public_contract" column="customer_id" columnId="queryCol_0" />
+    </Relation>
+    <Relation>
+      <From tableType="TableObject" table="crm_customer" column="customer_id" columnId="tblCol_9efca0300bfc44a5aafcac62b061f191" />
+      <To tableType="TableObject" table="crm_address" populationObjectName="query_public_address" column="customer_id" columnId="queryCol_0" />
+    </Relation>
+    <Relation>
+      <From tableType="TableObject" table="crm_invoice" column="invoice_id" columnId="tblCol_0c30f3ab4e1d4cc2ba61003a4151d11d" />
+      <To tableType="TableObject" table="crm_payment" populationObjectName="query_public_payment" column="invoice_id" columnId="queryCol_0" />
+    </Relation>
+    <Relation>
+      <From tableType="TableObject" table="crm_customer" column="customer_id" columnId="tblCol_9efca0300bfc44a5aafcac62b061f191" />
+      <To tableType="TableObject" table="crm_activity" populationObjectName="query_public_activity" column="customer_id" columnId="queryCol_0" />
+    </Relation>
+    <Relation>
+      <From tableType="TableObject" table="crm_activity" column="activity_id" columnId="tblCol_54494d229d564eaeaa5ee3c116db3bd5" />
+      <To tableType="TableObject" table="crm_cases" populationObjectName="query_public_cases" column="activity_id" columnId="queryCol_0" />
+    </Relation>
+    <Relation>
+      <From tableType="TableObject" table="crm_cases" column="case_id" columnId="tblCol_b3ffd378003b4163a9d19d32fe38523e" />
+      <To tableType="TableObject" table="crm_case_note" populationObjectName="query_public_case_note" column="case_id" columnId="queryCol_0" />
+    </Relation>
+    <Relation>
+      <From tableType="TableObject" table="crm_subscriber" column="subscriber_id" columnId="tblCol_b86283d1359248ab8d16f3a07b553e1a" />
+      <To tableType="TableObject" table="crm_balance" populationObjectName="query_public_balance" column="subscriber_id" columnId="queryCol_0" />
+    </Relation>
+    <Relation>
+      <From tableType="TableObject" table="crm_subscriber" column="subscriber_id" columnId="tblCol_b86283d1359248ab8d16f3a07b553e1a" />
+      <To tableType="TableObject" table="crm_invoice" populationObjectName="query_public_invoice" column="subscriber_id" columnId="queryCol_0" />
+    </Relation>
+    <Relation>
+      <From tableType="TableObject" table="crm_contract" column="contract_id" columnId="tblCol_4497f1117050484d9cbac5c12d931bbf" />
+      <To tableType="TableObject" table="crm_subscriber" populationObjectName="query_public_subscriber" column="subscriber_id" columnId="queryCol_0" />
+    </Relation>
+    <Relation>
+      <From tableType="TableObject" table="crm_customer" column="customer_id" columnId="tblCol_9efca0300bfc44a5aafcac62b061f191" />
+      <To tableType="TableObject" table="collection_collection" populationObjectName="query_public_collection" column="customer_id" columnId="queryCol_0" />
+    </Relation>
+    <Relation>
+      <From tableType="TableObject" table="crm_contract" column="contract_id" columnId="tblCol_4497f1117050484d9cbac5c12d931bbf" />
+      <To tableType="TableObject" table="orders_orders" populationObjectName="query_public_orders" column="contract_id" columnId="queryCol_0" />
+    </Relation>
+  </DatabaseRelations>
+  <PreVCsSqlScript />
+  <PostVCsSqlScript />
+  <Indexes />
+  <LudbProperties />
+  <DiagramGraph>
+    <Graph version="6.1.1.5" name="vdb.k2vdb.xml">
+      <Node name="crm_customer" pos="11 464" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="crm_contract" pos="313 214" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="crm_cases" pos="615 589" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="crm_case_note" pos="917 614" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="crm_address" pos="313 414" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="crm_subscriber" pos="615 64" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="crm_payment" pos="1219 239" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="crm_invoice" pos="917 214" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="crm_activity" pos="313 614" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="crm_balance" pos="917 14" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="collection_collection" pos="313 814" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="orders_orders" pos="615 264" size="257 136" listGroupSize="250 100" viewType="Table" />
+    </Graph>
+  </DiagramGraph>
+</VirtualDB>

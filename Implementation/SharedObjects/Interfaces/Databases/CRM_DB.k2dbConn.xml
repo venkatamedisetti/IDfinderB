@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DBConn xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="DBConnGenericAdoJdbc" name="CRM_DB" type="genericdb" version="6.1.3.1">
+  <Active>true</Active>
+  <DataSource>localhost</DataSource>
+  <PortNum>5432</PortNum>
+  <DataBase>CRM_DB</DataBase>
+  <UserId>CRM_USER</UserId>
+  <Password>00s/pWjW4V0+1CJQoxI197JUuSg6LBIed7zig9Pt5Ps=:pwAWLsrbp4CY+vRtIROlElWiJkoHyNJQRikP+4RRr9k=</Password>
+  <ConnectionStringServerSide>jdbc:postgresql://localhost:5432/CRM_DB?stringtype=unspecified</ConnectionStringServerSide>
+  <MinConnectionsNumber>0</MinConnectionsNumber>
+  <MaxConnectionsNumber>60</MaxConnectionsNumber>
+  <UseSelectAsteriskInAutoCreatedQueries>true</UseSelectAsteriskInAutoCreatedQueries>
+  <AutomaticMetadataLoading>false</AutomaticMetadataLoading>
+  <OfflineMode>true</OfflineMode>
+  <CommandList />
+  <JdbcDriverName>PostgreSQL</JdbcDriverName>
+  <ConnectionProperties />
+</DBConn>

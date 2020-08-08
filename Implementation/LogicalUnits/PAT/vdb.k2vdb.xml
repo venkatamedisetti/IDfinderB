@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VirtualDB xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="6.1.3.1">
+  <Name>vdb</Name>
+  <RootView>IIDF</RootView>
+  <LuLazyDataUpdate syncMethod="DecisionFunction" performEvery="1.00:00:00">
+    <DecisionFunction>fnIIDFCheckExtractFromSourceInd</DecisionFunction>
+  </LuLazyDataUpdate>
+  <IidFinderProp>
+    <DbInterface>dbOracle</DbInterface>
+    <OrderValidationTime>00:05:00</OrderValidationTime>
+    <HistoryStoreTime>7.00:00:00</HistoryStoreTime>
+    <DeltaSyncMethod>TimeInterval</DeltaSyncMethod>
+    <DeltaSyncTimeInterval>00:00:00</DeltaSyncTimeInterval>
+  </IidFinderProp>
+  <Tables>
+    <Table>HIS_ADDRESS_DATA</Table>
+    <Table>HIS_ADDRESS_NAME_LINK</Table>
+    <Table>HIS_ALLERGIES</Table>
+    <Table>HIS_FAMILY_HISTORY</Table>
+    <Table>HIS_INSURANCE_INFORMATION</Table>
+    <Table>HIS_PATIENT</Table>
+    <Table>HIS_VISIT</Table>
+    <Table>IIDF</Table>
+    <Table>IIDF_QUEUE</Table>
+    <Table>IIDF_RECENT_UPDATES</Table>
+  </Tables>
+  <TablesProperties>
+    <TableProperties name="HIS_ADDRESS_DATA">
+      <Populations>
+        <Population id="query_ADDRESS_DATA" name="query_ADDRESS_DATA" order="4" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="HIS_ADDRESS_NAME_LINK">
+      <Populations>
+        <Population id="query_ADDRESS_NAME_LINK" name="query_ADDRESS_NAME_LINK" order="3" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="HIS_ALLERGIES">
+      <Populations>
+        <Population id="query_ALLERGIES" name="query_ALLERGIES" order="3" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="HIS_FAMILY_HISTORY">
+      <Populations>
+        <Population id="query_FAMILY_HISTORY" name="query_FAMILY_HISTORY" order="3" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="HIS_INSURANCE_INFORMATION">
+      <Populations>
+        <Population id="query_INSURANCE_INFORMATION" name="query_INSURANCE_INFORMATION" order="3" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="HIS_PATIENT">
+      <Populations>
+        <Population id="query_PATIENT" name="query_PATIENT" order="2" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="HIS_VISIT">
+      <Populations>
+        <Population id="query_VISIT" name="query_VISIT" order="3" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="IIDF">
+      <Populations>
+        <Population id="query_IIDF" name="query_IIDF" order="1" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="IIDF_QUEUE">
+      <Populations>
+        <Population id="query_iidf_queue" name="query_iidf_queue" order="99" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="IIDF_RECENT_UPDATES">
+      <Populations>
+        <Population id="query_iidf_recent_updates" name="query_iidf_recent_updates" order="2" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+  </TablesProperties>
+  <EnrichmentsOrderList>
+    <Item order="1" active="true" name="IIDF" columnName="fnIIDFCheckIfInstanceFound" type="Table" />
+    <Item order="2" active="true" name="IIDF" columnName="fnIIDFInsertIIDStats" type="Table" />
+    <Item order="3" active="true" name="IIDF" columnName="fnIIDFCleanThreadGlobals" type="Table" />
+  </EnrichmentsOrderList>
+  <ReferencesList />
+  <Relations />
+  <DatabaseRelations>
+    <Relation>
+      <From tableType="TableObject" table="IIDF" column="IID" columnId="tblCol_55bbb1eee3034c8d891320b17f47d7f1" />
+      <To tableType="TableObject" table="IIDF_QUEUE" populationObjectName="query_iidf_queue" column="IID" columnId="fi_30.0" />
+    </Relation>
+    <Relation>
+      <From tableType="TableObject" table="IIDF" column="IID" columnId="tblCol_55bbb1eee3034c8d891320b17f47d7f1" />
+      <To tableType="TableObject" table="IIDF_RECENT_UPDATES" populationObjectName="query_iidf_recent_updates" column="IID" columnId="fi_75.0" />
+    </Relation>
+    <Relation>
+      <From tableType="TableObject" table="HIS_PATIENT" column="PATIENT_ID" columnId="tblCol_b8c4b642ab1f4258a42016dc17c28335" />
+      <To tableType="TableObject" table="HIS_INSURANCE_INFORMATION" populationObjectName="query_INSURANCE_INFORMATION" column="PATIENT_ID" columnId="queryCol_0" />
+    </Relation>
+    <Relation>
+      <From tableType="TableObject" table="IIDF" column="IID" columnId="tblCol_55bbb1eee3034c8d891320b17f47d7f1" />
+      <To tableType="TableObject" table="HIS_PATIENT" populationObjectName="query_PATIENT" column="SSN" columnId="queryCol_1" />
+    </Relation>
+    <Relation>
+      <From tableType="TableObject" table="HIS_PATIENT" column="PATIENT_ID" columnId="tblCol_b8c4b642ab1f4258a42016dc17c28335" />
+      <To tableType="TableObject" table="HIS_VISIT" populationObjectName="query_VISIT" column="PATIENT_ID" columnId="queryCol_0" />
+    </Relation>
+    <Relation>
+      <From tableType="TableObject" table="HIS_PATIENT" column="PATIENT_ID" columnId="tblCol_b8c4b642ab1f4258a42016dc17c28335" />
+      <To tableType="TableObject" table="HIS_ALLERGIES" populationObjectName="query_ALLERGIES" column="PATIENT_ID" columnId="queryCol_0" />
+    </Relation>
+    <Relation>
+      <From tableType="TableObject" table="HIS_PATIENT" column="PATIENT_ID" columnId="tblCol_b8c4b642ab1f4258a42016dc17c28335" />
+      <To tableType="TableObject" table="HIS_ADDRESS_NAME_LINK" populationObjectName="query_ADDRESS_NAME_LINK" column="PATIENT_ID" columnId="queryCol_1" />
+    </Relation>
+    <Relation>
+      <From tableType="TableObject" table="HIS_PATIENT" column="PATIENT_ID" columnId="tblCol_b8c4b642ab1f4258a42016dc17c28335" />
+      <To tableType="TableObject" table="HIS_FAMILY_HISTORY" populationObjectName="query_FAMILY_HISTORY" column="PATIENT_ID" columnId="queryCol_0" />
+    </Relation>
+    <Relation>
+      <From tableType="TableObject" table="HIS_ADDRESS_NAME_LINK" column="ADDRESS_ID" columnId="tblCol_d90171b357c54ce583259f004473ff94" />
+      <To tableType="TableObject" table="HIS_ADDRESS_DATA" populationObjectName="query_ADDRESS_DATA" column="ADDRESS_ID" columnId="queryCol_0" />
+    </Relation>
+  </DatabaseRelations>
+  <PreVCsSqlScript />
+  <PostVCsSqlScript />
+  <Indexes />
+  <LudbProperties />
+  <DiagramGraph>
+    <Graph version="6.1.3.1" name="vdb.k2vdb.xml">
+      <Node name="IIDF" pos="11 214" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="IIDF_QUEUE" pos="313 14" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="IIDF_RECENT_UPDATES" pos="313 214" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="HIS_INSURANCE_INFORMATION" pos="615 64" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="HIS_VISIT" pos="615 264" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="HIS_ALLERGIES" pos="615 464" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="HIS_ADDRESS_NAME_LINK" pos="615 664" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="HIS_FAMILY_HISTORY" pos="615 864" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="HIS_PATIENT" pos="313 414" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="HIS_ADDRESS_DATA" pos="917 714" size="257 136" listGroupSize="250 100" viewType="Table" />
+    </Graph>
+  </DiagramGraph>
+</VirtualDB>

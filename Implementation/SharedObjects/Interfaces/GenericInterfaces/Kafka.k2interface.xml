@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GenericInterface xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="KAFKA" displayName="Kafka" enabled="true" version="1.8">
+  <Name>Kafka</Name>
+  <Properties>
+    <Property name="Topic" dataType="string">
+      <Value />
+    </Property>
+    <Property name="BootstrapServers" dataType="string" mandatory="true">
+      <Value>localhost:9093</Value>
+    </Property>
+    <Property name="GroupID" dataType="string">
+      <Value>CUSTOMER_LU</Value>
+    </Property>
+    <Property name="DataType" dataType="OptionsList" mandatory="true">
+      <Value>Long</Value>
+    </Property>
+    <Property name="MaxPollRecords" dataType="integer">
+      <Value>1</Value>
+    </Property>
+    <Property name="Affinity" dataType="string">
+      <Value />
+    </Property>
+    <Property name="MsgsProcessingTimeout" dataType="integer" mandatory="true">
+      <Value>10000</Value>
+    </Property>
+    <Property name="SslEnabled" dataType="boolean">
+      <Value>False</Value>
+    </Property>
+    <Property name="SecurityProtocol" dataType="OptionsList">
+      <Value>SSL</Value>
+    </Property>
+    <Property name="TruststoreLocation" dataType="string">
+      <Value>/home/k2view/.kafka_ssl/kafka.client.truststore.jks</Value>
+    </Property>
+    <Property name="TruststorePassword" dataType="password">
+      <Value>/D86pF/uWuBrySiO79VugOXJr/Of8iIlE4wsJ3Y2zXg=:SYAiuN7hYNKMctYhGKezFTJTyVVE+TxZq/EqVCeAk9s=</Value>
+    </Property>
+    <Property name="KeystoreLocation" dataType="string">
+      <Value>/home/k2view/.kafka_ssl/kafka.client.keystore.jks</Value>
+    </Property>
+    <Property name="KeystorePassword" dataType="password">
+      <Value>Sbzc2OQ06mjMOYto7yEKAVX0AVA5AKYHGYE3gTtNZWs=:oq6WFkyJFtBZC03AIqcjbFccLQQGdrzWvWTZJsGHyW0=</Value>
+    </Property>
+    <Property name="KeyPassword" dataType="password">
+      <Value>bz4dD/a7PM5oXfwvP7rqP4JL5ortHkQm63fnUV9jnVQ=:9VwfRgprR+BFcxp6TkbF1q0syDnoXUlYgNKLgf3MPn0=</Value>
+    </Property>
+    <Property name="EndpointIdentificationAlgorithm" dataType="string" clearValueOnEnvOverride="false">
+      <Value />
+    </Property>
+    <Property name="SslCipherSuites" dataType="string" clearValueOnEnvOverride="false">
+      <Value />
+    </Property>
+    <Property name="SslEnabledProtocols" dataType="string" clearValueOnEnvOverride="false">
+      <Value />
+    </Property>
+    <Property name="SslTruststoreType" dataType="string" clearValueOnEnvOverride="false">
+      <Value />
+    </Property>
+  </Properties>
+  <TestConnection enabled="false" />
+</GenericInterface>

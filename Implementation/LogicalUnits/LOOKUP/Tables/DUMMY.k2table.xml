@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>DUMMY</Name>
+  <ID>tbl_DUMMY</ID>
+  <EntityId>tblCol_b9e7a802eeee41db99279f67281b3b15</EntityId>
+  <Columns>
+    <Column name="Dummy" id="tblCol_b9e7a802eeee41db99279f67281b3b15" index="0" datatype="text" />
+  </Columns>
+  <IndexesList />
+  <EnrichmentList />
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+</TableObject>

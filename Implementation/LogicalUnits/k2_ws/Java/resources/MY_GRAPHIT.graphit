@@ -1,0 +1,29 @@
+{
+  "name": "MY_GRAPHIT",
+  "children": [
+    {
+      "name": "HIS_VISIT",
+      "type": "sqlNonPrepared",
+      "code": "select PATIENT_ID, VISIT_ID, VISIT_DATE from HIS_VISIT",
+      "sessionProvider": "fabric",
+      "children": [
+        {
+          "name": "PATIENT_ID",
+          "type": "variable",
+          "code": "PATIENT_ID"
+        },
+        {
+          "name": "VISIT_ID",
+          "type": "variable",
+          "code": "VISIT_ID"
+        },
+        {
+          "name": "VISIT_DATE",
+          "type": "variable",
+          "code": "VISIT_DATE"
+        }
+      ]
+    }
+  ],
+  "params": []
+}

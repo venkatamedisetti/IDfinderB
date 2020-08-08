@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>cases</Name>
+  <ID>tbl_cases</ID>
+  <Columns>
+    <Column name="activity_id" id="tblCol_cae408912cb14644a33159744f6dde23" index="0" datatype="Integer" />
+    <Column name="case_id" id="tblCol_8bd81d9c71f641beae93f75320fb088e" index="1" datatype="Integer" mandatory="true" />
+    <Column name="case_date" id="tblCol_183ba0dbc65b44f3908aa3c79cc618fe" index="2" datatype="Text" />
+    <Column name="case_type" id="tblCol_fa52bc26344d447294452d43e7558b8c" index="3" datatype="Text" />
+    <Column name="status" id="tblCol_d883212d17c14df2b61015fbc79486c2" index="4" datatype="Text" />
+  </Columns>
+  <IndexesList />
+  <EnrichmentList />
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+</TableObject>

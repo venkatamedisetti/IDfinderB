@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>invoice</Name>
+  <ID>tbl_invoice</ID>
+  <Columns>
+    <Column name="subscriber_id" id="tblCol_3c1a721e34fb4c8db28be71ce4fbf528" index="0" datatype="Integer" />
+    <Column name="invoice_id" id="tblCol_a6377facea4c4a92a57e65267679bf29" index="1" datatype="Integer" mandatory="true" />
+    <Column name="issued_date" id="tblCol_bb154efb47f045fbb86a9658daacd0a6" index="2" datatype="Text" />
+    <Column name="due_date" id="tblCol_e743d0a4e9ae431fa76e81234378b7d6" index="3" datatype="Text" />
+    <Column name="status" id="tblCol_802abb3882e84704b1a79cbf1edfe74f" index="4" datatype="Text" />
+    <Column name="balance" id="tblCol_a6005995a79642cbbe1cc0906e5b1b84" index="5" datatype="Integer" />
+    <Column name="invoice_image" id="tblCol_c805602e0c78418b831760b178c96a56" index="6" datatype="Text" />
+  </Columns>
+  <IndexesList />
+  <EnrichmentList />
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+</TableObject>

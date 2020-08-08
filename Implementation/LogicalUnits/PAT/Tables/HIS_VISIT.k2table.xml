@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>HIS_VISIT</Name>
+  <ID>tbl_HIS_VISIT</ID>
+  <Columns>
+    <Column name="PATIENT_ID" id="tblCol_3663f8e9d8b44d5eb2a4822f7c01bd7b" index="0" datatype="Text" />
+    <Column name="VISIT_ID" id="tblCol_a7bdf45c679642c486fb3a021f5ff72b" index="1" datatype="Text" />
+    <Column name="VISIT_DATE" id="tblCol_9e9de49177164c0c9de477ac08cf9d9f" index="2" datatype="Text" />
+    <Column name="STATUS" id="tblCol_77aa6d3cc0b144449f5f582af3f68b70" index="3" datatype="Text" />
+    <Column name="PHYSICIAN" id="tblCol_140a7d4eb4ce4092bd88d37feb25245a" index="4" datatype="Text" />
+    <Column name="DIAGNOSIS" id="tblCol_9e014b782e0d4eb99938d5eac0b7bbd1" index="5" datatype="Text" />
+  </Columns>
+  <IndexesList>
+    <Index id="1" pk="true" unique="true" instanceOnly="true" columnsIdsList="tblCol_a7bdf45c679642c486fb3a021f5ff72b" />
+  </IndexesList>
+  <EnrichmentList />
+  <DataChangeIndexes>
+    <Index name="Search" />
+    <Index name="CDC_KEHAT">
+      <Indexes>
+        <Item columnName="VISIT_ID" type="key" />
+        <Item columnName="STATUS" type="key" />
+      </Indexes>
+    </Index>
+  </DataChangeIndexes>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+</TableObject>

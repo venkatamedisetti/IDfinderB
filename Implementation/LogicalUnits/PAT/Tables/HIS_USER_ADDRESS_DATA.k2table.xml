@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>HIS_USER_ADDRESS_DATA</Name>
+  <ID>tbl_HIS_USER_ADDRESS_DATA</ID>
+  <Columns>
+    <Column name="ADDRESS_ID" id="tblCol_d64110b2fa914c9bb5df75229276d318" index="0" datatype="Integer" mandatory="true" />
+    <Column name="STATE" id="tblCol_521032b5abd54a47a735201eeefb45d4" index="1" datatype="Text" />
+    <Column name="CITY" id="tblCol_6afb155a00ab43efbcf737150978b029" index="2" datatype="Text" />
+    <Column name="ADDRESS" id="tblCol_21fcca0a77c14719bad1967f03bd36d7" index="3" datatype="Text" />
+    <Column name="ZIP" id="tblCol_f27a4a6c70e14841a07185b7d227b53a" index="4" datatype="Integer" />
+  </Columns>
+  <IndexesList>
+    <Index id="1" pk="true" unique="true" instanceOnly="true" columnsIdsList="tblCol_d64110b2fa914c9bb5df75229276d318" />
+  </IndexesList>
+  <EnrichmentList />
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+</TableObject>

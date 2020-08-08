@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>HIS_USER_VISIT</Name>
+  <ID>tbl_HIS_USER_VISIT</ID>
+  <Columns>
+    <Column name="PATIENT_ID" id="tblCol_37db9dc3fcbe40ff875418377e8bddd9" index="0" datatype="Text" />
+    <Column name="VISIT_ID" id="tblCol_9c35233c10d54f2eaacbecf52b642ccb" index="1" datatype="Text" />
+    <Column name="VISIT_DATE" id="tblCol_755534835cc1486bb1ef4238e885d2f0" index="2" datatype="Text" />
+    <Column name="STATUS" id="tblCol_23e3e28496164bf4b98ace4b74b9add6" index="3" datatype="Text" />
+    <Column name="PHYSICIAN" id="tblCol_2d587ed944174708abc5c2b367b9ffcf" index="4" datatype="Text" />
+    <Column name="DIAGNOSIS" id="tblCol_7bebffb3577446b2b58be9bda3257853" index="5" datatype="Text" />
+  </Columns>
+  <IndexesList>
+    <Index id="1" pk="true" unique="true" instanceOnly="true" columnsIdsList="tblCol_9c35233c10d54f2eaacbecf52b642ccb" />
+  </IndexesList>
+  <EnrichmentList />
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+</TableObject>
