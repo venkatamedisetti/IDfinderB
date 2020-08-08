@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>IDFinderBasic</Name>
+  <CreateDate>2020-08-08T18:01:08.8746293-05:00</CreateDate>
+  <ProductVersion>6.1.3.1</ProductVersion>
+  <Mdm>false</Mdm>
+  <ProjectHasDiagramBinFiles>false</ProjectHasDiagramBinFiles>
+  <DataChangeIndicators>
+    <DataChange name="Search" enabled="true">
+      <Options>
+        <option>keyword</option>
+        <option>data</option>
+        <option>date</option>
+      </Options>
+    </DataChange>
+  </DataChangeIndicators>
+</Project>
