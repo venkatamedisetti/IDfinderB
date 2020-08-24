@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DBConn xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="DBConnGenericAdoJdbc" name="USAGE_DB" type="genericdb" version="6.1.3.1">
+  <Active>true</Active>
+  <DataSource>localhost</DataSource>
+  <PortNum>5432</PortNum>
+  <DataBase>USAGE_DB</DataBase>
+  <UserId>USAGE_USER</UserId>
+  <Password>DM7digBlbVeq3hGbOiBheR6OAR/zEfI+2rayxJLYJ5U=:mZc4LZ46fAaNmrG7Uh0+Y0rzT3pi2V7vwyEgHuBZtcs=</Password>
+  <ConnectionStringServerSide>jdbc:postgresql://localhost:5432/USAGE_DB?stringtype=unspecified</ConnectionStringServerSide>
+  <MinConnectionsNumber>0</MinConnectionsNumber>
+  <MaxConnectionsNumber>60</MaxConnectionsNumber>
+  <UseSelectAsteriskInAutoCreatedQueries>true</UseSelectAsteriskInAutoCreatedQueries>
+  <AutomaticMetadataLoading>false</AutomaticMetadataLoading>
+  <OfflineMode>true</OfflineMode>
+  <CommandList />
+  <JdbcDriverName>PostgreSQL</JdbcDriverName>
+  <ConnectionProperties />
+</DBConn>

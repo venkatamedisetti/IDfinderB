@@ -17,11 +17,6 @@
       <TableName>IIDF</TableName>
     </Enrichment>
     <Enrichment>
-      <Name>fnIIDFInsertIIDStats</Name>
-      <Type>Function</Type>
-      <TableName>IIDF</TableName>
-    </Enrichment>
-    <Enrichment>
       <Name>fnIIDFCleanThreadGlobals</Name>
       <Type>Function</Type>
       <TableName>IIDF</TableName>

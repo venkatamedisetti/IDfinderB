@@ -2,7 +2,7 @@
 <TableObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name>crm_customer</Name>
   <ID>tbl_crm_customer</ID>
-  <EntityId>tblCol_c9cc37773a994ffa9f8a305bf04d96e9</EntityId>
+  <EntityId />
   <Columns>
     <Column name="customer_id" id="tblCol_9efca0300bfc44a5aafcac62b061f191" index="0" datatype="Integer" />
     <Column name="ssn" id="tblCol_c9cc37773a994ffa9f8a305bf04d96e9" index="1" datatype="Text" />

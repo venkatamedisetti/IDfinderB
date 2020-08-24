@@ -8,7 +8,13 @@
     <TruncateBeforeSync>false</TruncateBeforeSync>
   </LazyDataUpdate>
   <SimpleObject>true</SimpleObject>
-  <IidFinderProp />
+  <IidFinderProp>
+    <ProactiveIndicator>true</ProactiveIndicator>
+    <DbInterface>CRM_DB</DbInterface>
+    <SourceSchema>crm</SourceSchema>
+    <SourceTableName>invoice</SourceTableName>
+    <SourceTableKey>invoice_id</SourceTableKey>
+  </IidFinderProp>
   <InputArguments>
     <Arg name="subscriber_id" id="queryCol_0" dataType="Integer" index="0" />
     <Arg name="invoice_id" id="queryCol_1" dataType="Integer" index="1" />
@@ -43,8 +49,8 @@
   </LinksList>
   <ModeKeyColumnIDs />
   <DiagramGraph>
-    <Graph name="crm_invoice.query_public_invoice.k2tablePop.xml" lastPartID="24">
-      <TableNode partID="0" name="crm_invoice" pos="383 5.70834351" width="252.999985" />
+    <Graph name="crm_invoice.query_public_invoice.k2tablePop.xml" lastPartID="72">
+      <TableNode partID="0" name="crm_invoice" pos="383 5.70834351" width="253" />
       <DBQueryNode partID="10" name="CRM_DB" pos="10 0.744796753" size="253 144.5104" isRoot="true">
         <DBQuery>{"Name":"query_public_invoice","ID":"query_query_public_invoice","ConnName":"CRM_DB","SQL":"SELECT * FROM public.invoice","ColumnsList":[{"ID":"queryCol_0","Name":"subscriber_id","DataType":"Integer","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"invoice_id","DataType":"Integer","Index":1,"IsInputArgument":true},{"ID":"queryCol_2","Name":"issued_date","DataType":"Text","Index":2,"IsInputArgument":true},{"ID":"queryCol_3","Name":"due_date","DataType":"Text","Index":3,"IsInputArgument":true},{"ID":"queryCol_4","Name":"status","DataType":"Text","Index":4,"IsInputArgument":true},{"ID":"queryCol_5","Name":"balance","DataType":"Integer","Index":5,"IsInputArgument":true},{"ID":"queryCol_6","Name":"invoice_image","DataType":"Text","Index":6,"IsInputArgument":true}]}</DBQuery>
       </DBQueryNode>

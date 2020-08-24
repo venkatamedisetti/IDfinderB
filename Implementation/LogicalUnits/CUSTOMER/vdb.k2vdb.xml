@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<VirtualDB xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="6.1.1.5">
+<VirtualDB xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="6.1.3.1">
   <Name>vdb</Name>
-  <RootView>crm_customer</RootView>
+  <RootView>IIDF</RootView>
   <LuLazyDataUpdate syncMethod="None" performEvery="1.00:00:00" />
   <IidFinderProp>
     <OrderValidationTime>00:05:00</OrderValidationTime>
@@ -21,71 +21,92 @@
     <Table>crm_invoice</Table>
     <Table>crm_payment</Table>
     <Table>crm_subscriber</Table>
+    <Table>IIDF</Table>
+    <Table>IIDF_QUEUE</Table>
+    <Table>IIDF_RECENT_UPDATES</Table>
     <Table>orders_orders</Table>
   </Tables>
   <TablesProperties>
     <TableProperties name="collection_collection">
       <Populations>
-        <Population id="query_public_collection" name="query_public_collection" order="2" disabled="false" enrichment="false" />
+        <Population id="query_public_collection" name="query_public_collection" order="3" disabled="false" enrichment="false" />
       </Populations>
     </TableProperties>
     <TableProperties name="crm_activity">
       <Populations>
-        <Population id="query_public_activity" name="query_public_activity" order="2" disabled="false" enrichment="false" />
+        <Population id="query_public_activity" name="query_public_activity" order="3" disabled="false" enrichment="false" />
       </Populations>
     </TableProperties>
     <TableProperties name="crm_address">
       <Populations>
-        <Population id="query_public_address" name="query_public_address" order="2" disabled="false" enrichment="false" />
+        <Population id="query_public_address" name="query_public_address" order="3" disabled="false" enrichment="false" />
       </Populations>
     </TableProperties>
     <TableProperties name="crm_balance">
       <Populations>
-        <Population id="query_public_balance" name="query_public_balance" order="4" disabled="false" enrichment="false" />
+        <Population id="query_public_balance" name="query_public_balance" order="5" disabled="false" enrichment="false" />
       </Populations>
     </TableProperties>
     <TableProperties name="crm_cases">
       <Populations>
-        <Population id="query_public_cases" name="query_public_cases" order="3" disabled="false" enrichment="false" />
+        <Population id="query_public_cases" name="query_public_cases" order="4" disabled="false" enrichment="false" />
       </Populations>
     </TableProperties>
     <TableProperties name="crm_case_note">
       <Populations>
-        <Population id="query_public_case_note" name="query_public_case_note" order="4" disabled="false" enrichment="false" />
+        <Population id="query_public_case_note" name="query_public_case_note" order="5" disabled="false" enrichment="false" />
       </Populations>
     </TableProperties>
     <TableProperties name="crm_contract">
       <Populations>
-        <Population id="query_public_contract" name="query_public_contract" order="2" disabled="false" enrichment="false" />
+        <Population id="query_public_contract" name="query_public_contract" order="3" disabled="false" enrichment="false" />
       </Populations>
     </TableProperties>
     <TableProperties name="crm_customer">
       <Populations>
-        <Population id="query_public_customer" name="query_public_customer" order="1" disabled="false" enrichment="false" />
+        <Population id="query_public_customer" name="query_public_customer" order="2" disabled="false" enrichment="false" />
       </Populations>
     </TableProperties>
     <TableProperties name="crm_invoice">
       <Populations>
-        <Population id="query_public_invoice" name="query_public_invoice" order="4" disabled="false" enrichment="false" />
+        <Population id="query_public_invoice" name="query_public_invoice" order="5" disabled="false" enrichment="false" />
       </Populations>
     </TableProperties>
     <TableProperties name="crm_payment">
       <Populations>
-        <Population id="query_public_payment" name="query_public_payment" order="5" disabled="false" enrichment="false" />
+        <Population id="query_public_payment" name="query_public_payment" order="6" disabled="false" enrichment="false" />
       </Populations>
     </TableProperties>
     <TableProperties name="crm_subscriber">
       <Populations>
-        <Population id="query_public_subscriber" name="query_public_subscriber" order="3" disabled="false" enrichment="false" />
+        <Population id="query_public_subscriber" name="query_public_subscriber" order="4" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="IIDF">
+      <Populations>
+        <Population id="query_IIDF" name="query_IIDF" order="1" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="IIDF_QUEUE">
+      <Populations>
+        <Population id="query_iidf_queue" name="query_iidf_queue" order="30" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="IIDF_RECENT_UPDATES">
+      <Populations>
+        <Population id="query_iidf_recent_updates" name="query_iidf_recent_updates" order="2" disabled="false" enrichment="false" />
       </Populations>
     </TableProperties>
     <TableProperties name="orders_orders">
       <Populations>
-        <Population id="query_public_orders" name="query_public_orders" order="3" disabled="false" enrichment="false" />
+        <Population id="query_public_orders" name="query_public_orders" order="4" disabled="false" enrichment="false" />
       </Populations>
     </TableProperties>
   </TablesProperties>
-  <EnrichmentsOrderList />
+  <EnrichmentsOrderList>
+    <Item order="1" active="true" name="IIDF" columnName="fnIIDFCheckIfInstanceFound" type="Table" />
+    <Item order="2" active="true" name="IIDF" columnName="fnIIDFCleanThreadGlobals" type="Table" />
+  </EnrichmentsOrderList>
   <ReferencesList />
   <Relations />
   <DatabaseRelations>
@@ -133,25 +154,40 @@
       <From tableType="TableObject" table="crm_contract" column="contract_id" columnId="tblCol_4497f1117050484d9cbac5c12d931bbf" />
       <To tableType="TableObject" table="orders_orders" populationObjectName="query_public_orders" column="contract_id" columnId="queryCol_0" />
     </Relation>
+    <Relation>
+      <From tableType="TableObject" table="IIDF" column="IID" columnId="tblCol_55bbb1eee3034c8d891320b17f47d7f1" />
+      <To tableType="TableObject" table="crm_customer" populationObjectName="query_public_customer" column="ssn" columnId="queryCol_1" />
+    </Relation>
+    <Relation>
+      <From tableType="TableObject" table="IIDF" column="IID" columnId="tblCol_55bbb1eee3034c8d891320b17f47d7f1" />
+      <To tableType="TableObject" table="IIDF_QUEUE" populationObjectName="query_iidf_queue" column="IID" columnId="fi_30.0" />
+    </Relation>
+    <Relation>
+      <From tableType="TableObject" table="IIDF" column="IID" columnId="tblCol_55bbb1eee3034c8d891320b17f47d7f1" />
+      <To tableType="TableObject" table="IIDF_RECENT_UPDATES" populationObjectName="query_iidf_recent_updates" column="IID" columnId="fi_75.0" />
+    </Relation>
   </DatabaseRelations>
   <PreVCsSqlScript />
   <PostVCsSqlScript />
   <Indexes />
   <LudbProperties />
   <DiagramGraph>
-    <Graph version="6.1.1.5" name="vdb.k2vdb.xml">
-      <Node name="crm_customer" pos="11 464" size="257 136" listGroupSize="250 100" viewType="Table" />
-      <Node name="crm_contract" pos="313 214" size="257 136" listGroupSize="250 100" viewType="Table" />
-      <Node name="crm_cases" pos="615 589" size="257 136" listGroupSize="250 100" viewType="Table" />
-      <Node name="crm_case_note" pos="917 614" size="257 136" listGroupSize="250 100" viewType="Table" />
-      <Node name="crm_address" pos="313 414" size="257 136" listGroupSize="250 100" viewType="Table" />
-      <Node name="crm_subscriber" pos="615 64" size="257 136" listGroupSize="250 100" viewType="Table" />
-      <Node name="crm_payment" pos="1219 239" size="257 136" listGroupSize="250 100" viewType="Table" />
-      <Node name="crm_invoice" pos="917 214" size="257 136" listGroupSize="250 100" viewType="Table" />
-      <Node name="crm_activity" pos="313 614" size="257 136" listGroupSize="250 100" viewType="Table" />
-      <Node name="crm_balance" pos="917 14" size="257 136" listGroupSize="250 100" viewType="Table" />
-      <Node name="collection_collection" pos="313 814" size="257 136" listGroupSize="250 100" viewType="Table" />
-      <Node name="orders_orders" pos="615 264" size="257 136" listGroupSize="250 100" viewType="Table" />
+    <Graph version="6.1.3.1" name="vdb.k2vdb.xml">
+      <Node name="crm_customer" pos="313 464" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="crm_contract" pos="615 214" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="crm_cases" pos="917 589" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="crm_case_note" pos="1219 614" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="crm_address" pos="615 414" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="crm_subscriber" pos="917 64" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="crm_payment" pos="1521 239" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="crm_invoice" pos="1219 214" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="crm_activity" pos="615 614" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="crm_balance" pos="1219 14" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="collection_collection" pos="615 812.3188" size="257 139.362427" listGroupSize="250 103.362427" viewType="Table" />
+      <Node name="orders_orders" pos="917 264" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="IIDF" pos="11 689" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="IIDF_QUEUE" pos="313 664" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="IIDF_RECENT_UPDATES" pos="313 864" size="257 136" listGroupSize="250 100" viewType="Table" />
     </Graph>
   </DiagramGraph>
 </VirtualDB>

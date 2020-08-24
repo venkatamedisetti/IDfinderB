@@ -37,7 +37,7 @@ public class SharedGlobals {
 
 	@desc("Indicate the list of  ludb's root table, Need to be set per LU")
 	@category("IIDF")
-	public static final String IIDF_ROOT_TABLE_NAME = "collection,customer,subscriber";
+	public static final String IIDF_ROOT_TABLE_NAME = "CRM_CUSTOMER";
 
 
 	@category("IIDF")

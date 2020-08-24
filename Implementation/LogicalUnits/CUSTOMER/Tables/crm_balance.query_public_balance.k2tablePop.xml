@@ -8,7 +8,14 @@
     <TruncateBeforeSync>false</TruncateBeforeSync>
   </LazyDataUpdate>
   <SimpleObject>true</SimpleObject>
-  <IidFinderProp />
+  <IidFinderProp>
+    <ProactiveIndicator>true</ProactiveIndicator>
+    <DbInterface>CRM_DB</DbInterface>
+    <SourceSchema>crm</SourceSchema>
+    <SourceTableName>balance</SourceTableName>
+    <SourceTableKey>subscriber_id,balance_id</SourceTableKey>
+    <StoreData>false</StoreData>
+  </IidFinderProp>
   <InputArguments>
     <Arg name="subscriber_id" id="queryCol_0" dataType="Integer" index="0" />
     <Arg name="balance_id" id="queryCol_1" dataType="Integer" index="1" />
@@ -40,8 +47,8 @@
   </LinksList>
   <ModeKeyColumnIDs />
   <DiagramGraph>
-    <Graph name="crm_balance.query_public_balance.k2tablePop.xml" lastPartID="21">
-      <TableNode partID="0" name="crm_balance" pos="383 5.74479675" width="252.999985" />
+    <Graph name="crm_balance.query_public_balance.k2tablePop.xml" lastPartID="49">
+      <TableNode partID="0" name="crm_balance" pos="383 5.74479675" width="253" />
       <DBQueryNode partID="9" name="CRM_DB" pos="10 0.78125" size="253 132.4375" isRoot="true">
         <DBQuery>{"Name":"query_public_balance","ID":"query_query_public_balance","ConnName":"CRM_DB","SQL":"SELECT * FROM public.balance","ColumnsList":[{"ID":"queryCol_0","Name":"subscriber_id","DataType":"Integer","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"balance_id","DataType":"Integer","Index":1,"IsInputArgument":true},{"ID":"queryCol_2","Name":"balance_ref_id","DataType":"Integer","Index":2,"IsInputArgument":true},{"ID":"queryCol_3","Name":"available_amount","DataType":"Integer","Index":3,"IsInputArgument":true},{"ID":"queryCol_4","Name":"reset_amount","DataType":"Integer","Index":4,"IsInputArgument":true},{"ID":"queryCol_5","Name":"reset_date","DataType":"Text","Index":5,"IsInputArgument":true}]}</DBQuery>
       </DBQueryNode>

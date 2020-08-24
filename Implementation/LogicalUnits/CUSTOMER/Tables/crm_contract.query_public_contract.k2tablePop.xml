@@ -8,7 +8,13 @@
     <TruncateBeforeSync>false</TruncateBeforeSync>
   </LazyDataUpdate>
   <SimpleObject>true</SimpleObject>
-  <IidFinderProp />
+  <IidFinderProp>
+    <ProactiveIndicator>true</ProactiveIndicator>
+    <DbInterface>CRM_DB</DbInterface>
+    <SourceSchema>crm</SourceSchema>
+    <SourceTableName>contract</SourceTableName>
+    <SourceTableKey>contract_id</SourceTableKey>
+  </IidFinderProp>
   <InputArguments>
     <Arg name="customer_id" id="queryCol_0" dataType="Integer" index="0" />
     <Arg name="contract_id" id="queryCol_1" dataType="Integer" index="1" />
@@ -46,8 +52,8 @@
   </LinksList>
   <ModeKeyColumnIDs />
   <DiagramGraph>
-    <Graph name="crm_contract.query_public_contract.k2tablePop.xml" lastPartID="27">
-      <TableNode partID="0" name="crm_contract" pos="383 5.67189026" width="252.999985" />
+    <Graph name="crm_contract.query_public_contract.k2tablePop.xml" lastPartID="63">
+      <TableNode partID="0" name="crm_contract" pos="383 5.67189026" width="253" />
       <DBQueryNode partID="11" name="CRM_DB" pos="10 0.7083435" size="253 156.583313" isRoot="true">
         <DBQuery>{"Name":"query_public_contract","ID":"query_query_public_contract","ConnName":"CRM_DB","SQL":"SELECT * FROM public.contract","ColumnsList":[{"ID":"queryCol_0","Name":"customer_id","DataType":"Integer","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"contract_id","DataType":"Integer","Index":1,"IsInputArgument":true},{"ID":"queryCol_2","Name":"contract_ref_id","DataType":"Integer","Index":2,"IsInputArgument":true},{"ID":"queryCol_3","Name":"associated_line","DataType":"Text","Index":3,"IsInputArgument":true},{"ID":"queryCol_4","Name":"contract_description","DataType":"Text","Index":4,"IsInputArgument":true},{"ID":"queryCol_5","Name":"from_date","DataType":"Text","Index":5,"IsInputArgument":true},{"ID":"queryCol_6","Name":"to_date","DataType":"Text","Index":6,"IsInputArgument":true},{"ID":"queryCol_7","Name":"associated_line_fmt","DataType":"Text","Index":7,"IsInputArgument":true}]}</DBQuery>
       </DBQueryNode>

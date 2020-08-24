@@ -14,6 +14,7 @@
     <SourceSchema>crm</SourceSchema>
     <SourceTableName>address</SourceTableName>
     <SourceTableKey>customer_id,address_id</SourceTableKey>
+    <StoreData>false</StoreData>
   </IidFinderProp>
   <InputArguments>
     <Arg name="customer_id" id="queryCol_0" dataType="Integer" index="0" />
@@ -52,7 +53,7 @@
   </LinksList>
   <ModeKeyColumnIDs />
   <DiagramGraph>
-    <Graph name="crm_address.query_public_address.k2tablePop.xml" lastPartID="63">
+    <Graph name="crm_address.query_public_address.k2tablePop.xml" lastPartID="81">
       <TableNode partID="0" name="crm_address" pos="383 5.67189026" width="253" />
       <DBQueryNode partID="11" name="CRM_DB" pos="10 0.7083435" size="253 156.583313" isRoot="true">
         <DBQuery>{"Name":"query_public_address","ID":"query_query_public_address","ConnName":"CRM_DB","SQL":"SELECT * FROM public.address","ColumnsList":[{"ID":"queryCol_0","Name":"customer_id","DataType":"Integer","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"address_id","DataType":"Integer","Index":1,"IsInputArgument":true},{"ID":"queryCol_2","Name":"street_address_1","DataType":"Text","Index":2,"IsInputArgument":true},{"ID":"queryCol_3","Name":"street_address_2","DataType":"Text","Index":3,"IsInputArgument":true},{"ID":"queryCol_4","Name":"city","DataType":"Text","Index":4,"IsInputArgument":true},{"ID":"queryCol_5","Name":"zip","DataType":"Text","Index":5,"IsInputArgument":true},{"ID":"queryCol_6","Name":"state","DataType":"Text","Index":6,"IsInputArgument":true},{"ID":"queryCol_7","Name":"country","DataType":"Text","Index":7,"IsInputArgument":true}]}</DBQuery>

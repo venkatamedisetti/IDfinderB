@@ -13,7 +13,7 @@
     <DbInterface>CRM_DB</DbInterface>
     <SourceSchema>crm</SourceSchema>
     <SourceTableName>customer</SourceTableName>
-    <SourceTableKey>ssn</SourceTableKey>
+    <SourceTableKey>customer_id</SourceTableKey>
     <LuId>ssn</LuId>
   </IidFinderProp>
   <InputArguments>
@@ -38,7 +38,7 @@
   </LinksList>
   <ModeKeyColumnIDs />
   <DiagramGraph>
-    <Graph name="crm_customer.query_public_customer.k2tablePop.xml" lastPartID="25">
+    <Graph name="crm_customer.query_public_customer.k2tablePop.xml" lastPartID="45">
       <TableNode partID="0" name="crm_customer" pos="383 5.81771469" width="253" />
       <DBQueryNode partID="7" name="CRM_DB" pos="10 0.854171753" size="253 108.291656" isRoot="true">
         <DBQuery>{"Name":"query_public_customer","ID":"query_query_public_customer","ConnName":"CRM_DB","SQL":"SELECT * FROM public.customer","ColumnsList":[{"ID":"queryCol_0","Name":"customer_id","DataType":"Integer","Index":0,"IsInputArgument":false},{"ID":"queryCol_1","Name":"ssn","DataType":"Text","Index":1,"IsInputArgument":true},{"ID":"queryCol_2","Name":"first_name","DataType":"Text","Index":2,"IsInputArgument":false},{"ID":"queryCol_3","Name":"last_name","DataType":"Text","Index":3,"IsInputArgument":false}]}</DBQuery>

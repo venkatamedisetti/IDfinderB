@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<lu keyspace="k2view_customer" name="CUSTOMER" sourceAvailable="false">
+	<table dbInterface="CRM_DB" key="customer_id" keyspace="crm" luid="ssn" name="customer">
+		<table dbInterface="COLLECTION_DB" key="collection_id" keyspace="collection" name="collection" parentKey="customer_id" stored="false"/>
+		<table dbInterface="CRM_DB" key="customer_id,address_id" keyspace="crm" name="address" stored="false" parentKey="customer_id"/>
+		<table dbInterface="CRM_DB" key="contract_id" keyspace="crm" name="contract" parentKey="customer_id">
+			<table dbInterface="ORDERS_DB" key="order_id" keyspace="orders" name="orders" parentKey="contract_id" stored="false"/>
+			<table dbInterface="CRM_DB" key="subscriber_id" keyspace="crm" name="subscriber" parentKey="subscriber_id=contract_id">
+				<table dbInterface="CRM_DB" key="subscriber_id,balance_id" keyspace="crm" name="balance" parentKey="subscriber_id" stored="false"/>
+				<table dbInterface="CRM_DB" key="invoice_id" keyspace="crm" name="invoice" parentKey="subscriber_id">
+					<table dbInterface="CRM_DB" key="payment_id" keyspace="crm" name="payment" parentKey="invoice_id" stored="false"/>
+				</table>
+			</table>
+		</table>
+		<table dbInterface="CRM_DB" key="customer_id,activity_id" keyspace="crm" name="activity" parentKey="customer_id" >
+			<table dbInterface="CRM_DB" key="case_id" keyspace="crm" name="cases" parentKey="activity_id" >
+				<table dbInterface="CRM_DB" key="case_id,note_id" keyspace="crm" name="case_note" parentKey="case_id" stored="false" />
+			</table>
+		</table>
+	</table>
+</lu>
