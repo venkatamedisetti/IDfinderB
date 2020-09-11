@@ -55,6 +55,7 @@
     <TableProperties name="crm_case_note">
       <Populations>
         <Population id="query_public_case_note" name="query_public_case_note" order="5" disabled="false" enrichment="false" />
+        <Population id="query_public_case_note1" name="query_public_case_note1" order="5" disabled="false" enrichment="false" />
       </Populations>
     </TableProperties>
     <TableProperties name="crm_contract">
@@ -166,6 +167,10 @@
       <From tableType="TableObject" table="IIDF" column="IID" columnId="tblCol_55bbb1eee3034c8d891320b17f47d7f1" />
       <To tableType="TableObject" table="IIDF_RECENT_UPDATES" populationObjectName="query_iidf_recent_updates" column="IID" columnId="fi_75.0" />
     </Relation>
+    <Relation>
+      <From tableType="TableObject" table="crm_cases" column="case_id" columnId="tblCol_b3ffd378003b4163a9d19d32fe38523e" />
+      <To tableType="TableObject" table="crm_case_note" populationObjectName="query_public_case_note1" column="note_id" columnId="queryCol_1" />
+    </Relation>
   </DatabaseRelations>
   <PreVCsSqlScript />
   <PostVCsSqlScript />
@@ -176,7 +181,7 @@
       <Node name="crm_customer" pos="313 464" size="257 136" listGroupSize="250 100" viewType="Table" />
       <Node name="crm_contract" pos="615 214" size="257 136" listGroupSize="250 100" viewType="Table" />
       <Node name="crm_cases" pos="917 589" size="257 136" listGroupSize="250 100" viewType="Table" />
-      <Node name="crm_case_note" pos="1219 614" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="crm_case_note" pos="1219 598" size="257 152" listGroupSize="250 100" viewType="Table" />
       <Node name="crm_address" pos="615 414" size="257 136" listGroupSize="250 100" viewType="Table" />
       <Node name="crm_subscriber" pos="917 64" size="257 136" listGroupSize="250 100" viewType="Table" />
       <Node name="crm_payment" pos="1521 239" size="257 136" listGroupSize="250 100" viewType="Table" />

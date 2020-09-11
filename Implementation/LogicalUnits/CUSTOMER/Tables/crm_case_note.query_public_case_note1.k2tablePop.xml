@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TablePopulationObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <ID>query_public_case_note</ID>
-  <PopulationObjectName>query_public_case_note</PopulationObjectName>
+  <ID>query_public_case_note1</ID>
+  <PopulationObjectName>query_public_case_note1</PopulationObjectName>
   <TableName>crm_case_note</TableName>
   <RootItemID>query_query_public_case_note</RootItemID>
   <Mode>Upsert</Mode>
@@ -42,7 +42,7 @@
   </LinksList>
   <ModeKeyColumnIDs />
   <DiagramGraph>
-    <Graph name="crm_case_note.query_public_case_note.k2tablePop.xml" lastPartID="45">
+    <Graph name="crm_case_note.query_public_case_note1.k2tablePop.xml" lastPartID="55">
       <TableNode partID="0" name="crm_case_note" pos="383 5.81771469" width="253" />
       <DBQueryNode partID="7" name="CRM_DB" pos="10 0.854171753" size="253 108.291656" isRoot="true">
         <DBQuery>{"Name":"query_public_case_note","ID":"query_query_public_case_note","ConnName":"CRM_DB","SQL":"SELECT * FROM public.case_note","ColumnsList":[{"ID":"queryCol_0","Name":"case_id","DataType":"Integer","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"note_id","DataType":"Integer","Index":1,"IsInputArgument":true},{"ID":"queryCol_2","Name":"note_date","DataType":"Text","Index":2,"IsInputArgument":true},{"ID":"queryCol_3","Name":"note_text","DataType":"Text","Index":3,"IsInputArgument":true}]}</DBQuery>

@@ -14,7 +14,8 @@
 		</table>
 		<table dbInterface="CRM_DB" key="customer_id,activity_id" keyspace="crm" name="activity" parentKey="customer_id" >
 			<table dbInterface="CRM_DB" key="case_id" keyspace="crm" name="cases" parentKey="activity_id" >
-				<table dbInterface="CRM_DB" key="case_id,note_id" keyspace="crm" name="case_note" parentKey="case_id" stored="false" />
+				<table dbInterface="CRM_DB" key="case_id,note_id" keyspace="crm" name="case_note" parentKey="case_id"/>
+				<table dbInterface="CRM_DB" key="case_id,note_id" keyspace="crm" name="case_note$1" parentKey="note_id=case_id"/>
 			</table>
 		</table>
 	</table>

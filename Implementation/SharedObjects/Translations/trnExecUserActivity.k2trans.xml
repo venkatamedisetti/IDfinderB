@@ -111,7 +111,24 @@
         </xs:complexType>
       </xs:element>
     </xs:schema>
-    <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" />
+    <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+      <DocumentElement>
+        <trnExecUserActivity diffgr:id="trnExecUserActivity1" msdata:rowOrder="0">
+          <table_name>ORDERS_ORDERS</table_name>
+          <post_exec>false</post_exec>
+          <global_name></global_name>
+          <function_name>fnPreOrderCheck</function_name>
+          <global_value></global_value>
+        </trnExecUserActivity>
+        <trnExecUserActivity diffgr:id="trnExecUserActivity2" msdata:rowOrder="1">
+          <table_name>ORDERS_ORDERS</table_name>
+          <post_exec>true</post_exec>
+          <global_name></global_name>
+          <function_name>fnPostOrderCheck</function_name>
+          <global_value></global_value>
+        </trnExecUserActivity>
+      </DocumentElement>
+    </diffgr:diffgram>
   </TranslationData>
   <DataRowsHeight>20</DataRowsHeight>
 </Translation>
