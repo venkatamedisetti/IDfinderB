@@ -54,7 +54,7 @@ public class SharedLogic {
     static final String luName = getLuType().luName;
     static final String deltaTableName = IidFinderUtils.getDeltaTableName(IidFinderUtils.getAlias(luName));
     static final String query = String.format("select iid from %s.%s where iid=? limit 1", IidFinderUtils.getKeyspace(), deltaTableName);
-    private static final int TEN_MINUTES = 10 * 60 * 1000;
+    private static final int TEN_MINUTES = 1 * 60 * 1000;
     private static DecimalFormat dcFor = new DecimalFormat("##.##");
 
     @type(RootFunction)
@@ -89,7 +89,7 @@ public class SharedLogic {
             }
 			
             if (prevIidTs != null) {
-                if (prevIidTs.ts + Integer.parseInt(getLuType().ludbGlobals.get("DELTA_JOB_PREV_MESSAGE_DIFF_EPSILON_MS")) < currIidTs.ts) {
+                if (prevIidTs.ts - Integer.parseInt(getLuType().ludbGlobals.get("DELTA_JOB_PREV_MESSAGE_DIFF_EPSILON_MS")) < currIidTs.ts) {
                     handleNewIID(currIidTs, stats);
                 }
             } else {

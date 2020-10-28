@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>contact_link</Name>
+  <ID>tbl_contact_link</ID>
+  <Columns>
+    <Column name="customer_id" id="tblCol_b6d4fe660f8b41acabadc687228ac41e" index="0" datatype="Integer" mandatory="true" />
+    <Column name="contact_id" id="tblCol_5cb7a97acc6e486cb9174e6e4ebbe5aa" index="1" datatype="Integer" mandatory="true" />
+  </Columns>
+  <IndexesList>
+    <Index id="1" pk="true" unique="true" instanceOnly="true" columnsIdsList="tblCol_b6d4fe660f8b41acabadc687228ac41e,tblCol_5cb7a97acc6e486cb9174e6e4ebbe5aa" />
+  </IndexesList>
+  <EnrichmentList />
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+</TableObject>

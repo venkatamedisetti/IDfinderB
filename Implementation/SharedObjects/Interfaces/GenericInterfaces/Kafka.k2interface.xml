@@ -6,10 +6,10 @@
       <Value />
     </Property>
     <Property name="BootstrapServers" dataType="string" mandatory="true">
-      <Value>localhost:9093</Value>
+      <Value>localhost:9092</Value>
     </Property>
     <Property name="GroupID" dataType="string">
-      <Value>CUSTOMER_LU</Value>
+      <Value>CUSTOMER</Value>
     </Property>
     <Property name="DataType" dataType="OptionsList" mandatory="true">
       <Value>Long</Value>

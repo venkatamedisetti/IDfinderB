@@ -11,6 +11,8 @@
   </IidFinderProp>
   <Tables>
     <Table>collection_collection</Table>
+    <Table>contact</Table>
+    <Table>contact_link</Table>
     <Table>crm_activity</Table>
     <Table>crm_address</Table>
     <Table>crm_balance</Table>
@@ -30,6 +32,16 @@
     <TableProperties name="collection_collection">
       <Populations>
         <Population id="query_public_collection" name="query_public_collection" order="3" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="contact">
+      <Populations>
+        <Population id="query_public_contact" name="query_public_contact" order="4" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="contact_link">
+      <Populations>
+        <Population id="query_public_contact_link" name="query_public_contact_link" order="3" disabled="false" enrichment="false" />
       </Populations>
     </TableProperties>
     <TableProperties name="crm_activity">
@@ -171,6 +183,14 @@
       <From tableType="TableObject" table="crm_cases" column="case_id" columnId="tblCol_b3ffd378003b4163a9d19d32fe38523e" />
       <To tableType="TableObject" table="crm_case_note" populationObjectName="query_public_case_note1" column="note_id" columnId="queryCol_1" />
     </Relation>
+    <Relation>
+      <From tableType="TableObject" table="contact_link" column="contact_id" columnId="tblCol_5cb7a97acc6e486cb9174e6e4ebbe5aa" />
+      <To tableType="TableObject" table="contact" populationObjectName="query_public_contact" column="contact_id" columnId="queryCol_0" />
+    </Relation>
+    <Relation>
+      <From tableType="TableObject" table="crm_customer" column="customer_id" columnId="tblCol_9efca0300bfc44a5aafcac62b061f191" />
+      <To tableType="TableObject" table="contact_link" populationObjectName="query_public_contact_link" column="customer_id" columnId="queryCol_0" />
+    </Relation>
   </DatabaseRelations>
   <PreVCsSqlScript />
   <PostVCsSqlScript />
@@ -178,21 +198,23 @@
   <LudbProperties />
   <DiagramGraph>
     <Graph version="6.1.3.1" name="vdb.k2vdb.xml">
-      <Node name="crm_customer" pos="313 464" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="crm_customer" pos="313 14" size="257 136" listGroupSize="250 100" viewType="Table" />
       <Node name="crm_contract" pos="615 214" size="257 136" listGroupSize="250 100" viewType="Table" />
-      <Node name="crm_cases" pos="917 589" size="257 136" listGroupSize="250 100" viewType="Table" />
-      <Node name="crm_case_note" pos="1219 598" size="257 152" listGroupSize="250 100" viewType="Table" />
+      <Node name="crm_cases" pos="917 39" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="crm_case_note" pos="1219 48" size="257 152" listGroupSize="250 100" viewType="Table" />
       <Node name="crm_address" pos="615 414" size="257 136" listGroupSize="250 100" viewType="Table" />
-      <Node name="crm_subscriber" pos="917 64" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="crm_subscriber" pos="943.1073 540.4566" size="257 136" listGroupSize="250 100" viewType="Table" />
       <Node name="crm_payment" pos="1521 239" size="257 136" listGroupSize="250 100" viewType="Table" />
       <Node name="crm_invoice" pos="1219 214" size="257 136" listGroupSize="250 100" viewType="Table" />
-      <Node name="crm_activity" pos="615 614" size="257 136" listGroupSize="250 100" viewType="Table" />
-      <Node name="crm_balance" pos="1219 14" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="crm_activity" pos="615 14" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="crm_balance" pos="1252.46118 390.104034" size="257 136" listGroupSize="250 100" viewType="Table" />
       <Node name="collection_collection" pos="615 812.3188" size="257 139.362427" listGroupSize="250 103.362427" viewType="Table" />
       <Node name="orders_orders" pos="917 264" size="257 136" listGroupSize="250 100" viewType="Table" />
-      <Node name="IIDF" pos="11 689" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="IIDF" pos="11 39" size="257 136" listGroupSize="250 100" viewType="Table" />
       <Node name="IIDF_QUEUE" pos="313 664" size="257 136" listGroupSize="250 100" viewType="Table" />
       <Node name="IIDF_RECENT_UPDATES" pos="313 864" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="contact_link" pos="322.578217 260.0788" size="257.000031 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="contact" pos="337.311066 466.5403" size="256.999969 135.999969" listGroupSize="250 100" viewType="Table" />
     </Graph>
   </DiagramGraph>
 </VirtualDB>

@@ -74,7 +74,7 @@ public class SharedGlobals {
 	public static String DEBUG_LOG_THRESHOLD = "200";
 
 	@category("IIDF")
-	public static String PATH_TO_KAFKA_BIN = "/opt/apps/kafka/kafka/bin/";
+	public static String PATH_TO_KAFKA_BIN = "C:\\kafka\\bin\\windows\\";
 
 	@category("IIDF")
 	public static String STATS_EMAIL_REPORT_LUS = "CUSTOMER";

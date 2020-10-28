@@ -33,6 +33,7 @@ import static com.k2view.cdbms.shared.utils.UserCodeDescribe.FunctionType.*;
 import static com.k2view.cdbms.shared.user.ProductFunctions.*;
 import static com.k2view.cdbms.usercode.common.SharedGlobals.DB_CASS_NAME;
 import static com.k2view.cdbms.usercode.common.SharedLogic.*;
+import static com.k2view.cdbms.usercode.common.SharedGlobals.*;
 
 
 @SuppressWarnings({"unused", "DefaultAnnotationParam"})
@@ -81,7 +82,7 @@ public class SharedLogic {
 		    c.setTime(date);
 		    int t = c.get(Calendar.HOUR_OF_DAY) * 100 + c.get(Calendar.MINUTE);
 		    boolean isBetween = to > from && t >= from && t <= to || to < from && (t >= from || t <= to);
-		
+			
 		    Object parserCount = null;
 		    try (Db.Rows rs = db(DB_CASS_NAME).fetch("SELECT count(*) from k2system.k2_jobs WHERE type = 'PARSER' and name = '" + getLuType().luName + ".deltaIid' and status = 'IN_PROCESS' ALLOW FILTERING ")) {
 		        parserCount = rs.firstValue();
@@ -96,6 +97,7 @@ public class SharedLogic {
 		        }
 		    } else {
 		        int partitions = fnGetTopParCnt(topicName);
+			    log.info("AAAAAAAAAAAAAA"+ partitions);
 		        log.info(String.format("fnGetJobManager: Starting Get Job Parser For %s Total Number Of Partitions:%s", topicName, partitions));
 		        if (parserCount == null || Integer.parseInt((parserCount + "")) < partitions) {
 		            db("FabricDB").execute("startjob USER_JOB name='" + getLuType().luName + ".deltaJobsExecutor'");
@@ -125,7 +127,7 @@ public class SharedLogic {
 		InputStream isrErr = null;
 		Process p = null;
 		try {
-		    p = Runtime.getRuntime().exec(new String[]{"bash", "-c", "/opt/apps/kafka/kafka/bin/kafka-consumer-groups --bootstrap-server " + IifProperties.getInstance().getKafkaBootsrapServers() + " --describe --group IDfinderGroupId_" + clustName + " --command-config " + System.getenv("K2_HOME") + "/.kafka_ssl/client-ssl.properties|grep -w -E '" + LuTopicsList.toString() + "'|awk '{lag += $5}END {print lag}'"});
+		    p = Runtime.getRuntime().exec(new String[]{"cmd", "/C", PATH_TO_KAFKA_BIN+"kafka-consumer-groups.bat --bootstrap-server " + IifProperties.getInstance().getKafkaBootsrapServers() + " --describe --group IDfinderGroupId_" + clustName + " --command-config " + System.getenv("K2_HOME") + "/.kafka_ssl/client-ssl.properties|grep -w -E '" + LuTopicsList.toString() + "'|awk '{lag += $5}END {print lag}'"});
 		    p.waitFor();
 		    isr = new InputStreamReader(p.getInputStream());
 		    isrErr = p.getErrorStream();

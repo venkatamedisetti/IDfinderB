@@ -48,7 +48,6 @@ public class Logic extends UserCode {
 		Map<String, Object> keysMap = datachange.getValues();
 		Object ORDER_DATE = keysMap.get("ORDER_DATE");
 		if (ORDER_DATE != null) {
-		    UserCodeDelegate ucd = (UserCodeDelegate) i_userCodeDelegate;
 		    final java.text.DateFormat clsDateFormat = new java.text.SimpleDateFormat("yyyy-MM-dd");
 		    clsDateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
 		    java.util.Date currentTime = new java.util.Date();

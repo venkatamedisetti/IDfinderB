@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<JdbcDriverConf xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>MariaDB</Name>
+  <ClassName>org.mariadb.jdbc.Driver</ClassName>
+  <UrlTemplate>jdbc:mariadb://localhost:3306/[DATABASE]</UrlTemplate>
+  <DefaultPort xsi:nil="true" />
+  <PoolEnabled>true</PoolEnabled>
+  <ValidationQuery>select 1</ValidationQuery>
+  <TestOnReturn>false</TestOnReturn>
+  <InitSql><![CDATA[]]></InitSql>
+  <InterceptorStatementCache>false</InterceptorStatementCache>
+  <InterceptorConnectionState>false</InterceptorConnectionState>
+  <InterceptorResetAbandonedTimer>false</InterceptorResetAbandonedTimer>
+  <MinEvictableIdleTimeMillis>60000</MinEvictableIdleTimeMillis>
+  <DynamicJars>true</DynamicJars>
+  <SupportsImplicitConversions>true</SupportsImplicitConversions>
+  <SupportsNestedQueries>true</SupportsNestedQueries>
+  <SupportsConditionalOr>true</SupportsConditionalOr>
+  <SupportsDistinctClause>true</SupportsDistinctClause>
+  <SupportsProactiveSync>false</SupportsProactiveSync>
+  <EnclosureStartCharacter>"</EnclosureStartCharacter>
+  <EnclosureEndCharacter>"</EnclosureEndCharacter>
+  <AliasAfterInnerQuery>AS ALIAS1</AliasAfterInnerQuery>
+  <BindingVariableSign>?</BindingVariableSign>
+  <BindingRequiresColumn />
+  <BindingVariableSuffixStr />
+  <MetadataQueryTablesList><![CDATA[]]></MetadataQueryTablesList>
+  <MetadataQueryColumnsList><![CDATA[]]></MetadataQueryColumnsList>
+  <MetadataQueryFksList><![CDATA[]]></MetadataQueryFksList>
+  <MetadataQueryPksList><![CDATA[]]></MetadataQueryPksList>
+  <ConnectionProperties />
+</JdbcDriverConf>
