@@ -14,5 +14,11 @@
       <ExecuteEvery>00:05:00</ExecuteEvery>
       <InputParams />
     </Job>
+    <Job methodName="fnOrphanJobManager" jobName="fnOrphanJobManager" active="true">
+      <ExecutionMode>Manually</ExecutionMode>
+      <ScheduleType>TimeInterval</ScheduleType>
+      <ExecuteEvery>00:05:00</ExecuteEvery>
+      <InputParams />
+    </Job>
   </Jobs>
 </JobsGroup>
