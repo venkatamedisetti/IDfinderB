@@ -62,4 +62,34 @@ public class Logic extends UserCode {
 	public static void fnPostOrderCheck(Object dc, Object i_userCodeDelegate) throws Exception {
 		ludb().execute("delete from orders_orders where order_status = 'Closed'");
 	}
+
+
+	public static void fnCheckCaseDate(Object dc, Object i_userCodeDelegate) throws Exception {
+		DataChange datachange = (DataChange) dc;
+		UserCodeDelegate ucd = (UserCodeDelegate) i_userCodeDelegate;
+		Map<String, Object> keysMap = datachange.getValues();
+		Object CASE_DATE = keysMap.get("CASE_DATE");
+		if(CASE_DATE != null){
+			    final java.text.DateFormat clsDateFormat = new java.text.SimpleDateFormat("yyyy-MM-dd");
+			    clsDateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
+			    java.util.Date currentTime = new java.util.Date();
+				java.util.Date case_date = clsDateFormat.parse(""+CASE_DATE);
+			    if(!(case_date.before(currentTime))){
+					keysMap.put("CASE_DATE", null);
+					StringBuilder bind = new StringBuilder();
+					StringBuilder allcols = new StringBuilder();
+					Object[] params = new Object[keysMap.size()];
+					int b = 0;
+					String prefix= "";
+					for (String key : keysMap.keySet()) {
+					    bind.append(prefix + "?");
+					    params[b] = keysMap.get(key);
+						allcols.append(prefix + key) ; 
+					    prefix = ",";
+					    b++;
+					}
+					ucd.ludb().execute("insert into CRM_CASES ("+allcols.toString()+") values (" +bind.toString()+")",params);
+				}
+		}
+	}
 }

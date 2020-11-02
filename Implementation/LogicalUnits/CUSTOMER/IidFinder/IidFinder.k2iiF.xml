@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <lu keyspace="k2view_customer" name="CUSTOMER" sourceAvailable="false">
 	<table dbInterface="CRM_DB" key="customer_id" keyspace="crm" luid="ssn" name="customer">
+		<table dbInterface="CRM_DB" key="customer_id,contact_id" keyspace="crm" name="contact_link" parentKey="customer_id" isCrossIID="true">
+			<table dbInterface="CRM_DB" key="contact_id" keyspace="crm" name="contact" parentKey="contact_id" stored="false"/>
+		</table>
 		<table dbInterface="COLLECTION_DB" key="collection_id" keyspace="collection" name="collection" parentKey="customer_id" stored="false"/>
 		<table dbInterface="CRM_DB" key="customer_id,address_id" keyspace="crm" name="address" stored="false" parentKey="customer_id"/>
 		<table dbInterface="CRM_DB" key="contract_id" keyspace="crm" name="contract" parentKey="customer_id">
@@ -9,9 +12,6 @@
 				<table dbInterface="CRM_DB" key="subscriber_id,balance_id" keyspace="crm" name="balance" parentKey="subscriber_id" stored="false"/>
 				<table dbInterface="CRM_DB" key="invoice_id" keyspace="crm" name="invoice" parentKey="subscriber_id">
 					<table dbInterface="CRM_DB" key="payment_id" keyspace="crm" name="payment" parentKey="invoice_id"/>
-				</table>
-				<table dbInterface="CRM_DB" key="customer_id,contact_id" keyspace="crm" name="contact_link" parentKey="customer_id"  isCrossIID="true">
-					<table dbInterface="CRM_DB" key="contact_id" keyspace="crm" name="contact" parentKey="contact_id" stored="false"/>
 				</table>
 			</table>
 		</table>
@@ -23,3 +23,5 @@
 		</table>
 	</table>
 </lu>
+
+

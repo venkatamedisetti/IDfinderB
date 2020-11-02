@@ -20,5 +20,20 @@
       <ExecuteEvery>00:05:00</ExecuteEvery>
       <InputParams />
     </Job>
+    <Job methodName="fnGetLUStats" jobName="fnGetLUStats" active="true">
+      <ScheduleType>TimeInterval</ScheduleType>
+      <ExecuteEvery>00:01:00</ExecuteEvery>
+      <InputParams />
+    </Job>
+    <Job methodName="fnGetIDFinderJMXStats" jobName="fnGetIDFinderJMXStats" active="true">
+      <ScheduleType>TimeInterval</ScheduleType>
+      <ExecuteEvery>00:01:00</ExecuteEvery>
+      <InputParams />
+    </Job>
+    <Job methodName="fnGetIDFDeletedDeltas" jobName="fnGetIDFDeletedDeltas" active="true">
+      <ScheduleType>TimeInterval</ScheduleType>
+      <ExecuteEvery>00:01:00</ExecuteEvery>
+      <InputParams />
+    </Job>
   </Jobs>
 </JobsGroup>

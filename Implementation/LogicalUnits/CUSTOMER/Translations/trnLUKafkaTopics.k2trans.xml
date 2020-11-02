@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Translation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>trnLUKafkaTopics</Name>
+  <InputNotFoundAction>Use_Default</InputNotFoundAction>
+  <SchemaColumns>
+    <Column>
+      <Title>TopicName</Title>
+      <ColumnName>TopicName</ColumnName>
+      <Direction>Input</Direction>
+      <Type>Text</Type>
+      <Length>100</Length>
+      <Format />
+      <Index>0</Index>
+      <AllowNULL>true</AllowNULL>
+      <GridColumnProperties width="317" />
+    </Column>
+  </SchemaColumns>
+  <IsImportFromSQL>false</IsImportFromSQL>
+  <IsDynamicData>false</IsDynamicData>
+  <ColumnMapping />
+  <TranslationData>
+    <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="trnLUKafkaTopics" msdata:UseCurrentLocale="true">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="trnLUKafkaTopics">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TopicName" default="" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+      <DocumentElement>
+        <trnLUKafkaTopics diffgr:id="trnLUKafkaTopics1" msdata:rowOrder="0">
+          <TopicName>IidFinder.CRM.ACTIVITY</TopicName>
+        </trnLUKafkaTopics>
+        <trnLUKafkaTopics diffgr:id="trnLUKafkaTopics2" msdata:rowOrder="1">
+          <TopicName>IidFinder.CRM.CASES</TopicName>
+        </trnLUKafkaTopics>
+        <trnLUKafkaTopics diffgr:id="trnLUKafkaTopics3" msdata:rowOrder="2">
+          <TopicName>IidFinder.CRM.CONTACT_LINK</TopicName>
+        </trnLUKafkaTopics>
+        <trnLUKafkaTopics diffgr:id="trnLUKafkaTopics4" msdata:rowOrder="3">
+          <TopicName>IidFinder.CRM.CUSTOMER</TopicName>
+        </trnLUKafkaTopics>
+        <trnLUKafkaTopics diffgr:id="trnLUKafkaTopics5" msdata:rowOrder="4">
+          <TopicName>IidFinder.CRM.CASE_NOTE</TopicName>
+        </trnLUKafkaTopics>
+        <trnLUKafkaTopics diffgr:id="trnLUKafkaTopics6" msdata:rowOrder="5">
+          <TopicName>IidFinder.CRM.SUBSCRIBER</TopicName>
+        </trnLUKafkaTopics>
+      </DocumentElement>
+    </diffgr:diffgram>
+  </TranslationData>
+  <DataRowsHeight>20</DataRowsHeight>
+</Translation>

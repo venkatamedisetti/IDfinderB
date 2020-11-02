@@ -947,38 +947,38 @@ public class SharedLogic {
     }
 
 
-    @type(DecisionFunction)
-    @out(name = "decision", type = Boolean.class, desc = "")
-    public static Boolean fnIIDFCheckExtractFromSourceInd() throws Exception {
-        if (isFirstSync() && ("true").equals(IIDF_EXTRACT_FROM_SOURCE)) {
-            return true;
-        } else if (("true").equals(IIDF_EXTRACT_FROM_SOURCE)) {
-            String tableName = getTableName();
-            if (tableName == null) tableName = "";
-            Set<String> parentsList = new HashSet<>();
-            if (getThreadGlobals("childCrossInsts" + tableName.toUpperCase()) != null) {
-                return true;
-            } else {
-                if (getThreadGlobals("IIDF_PARENT_TABLES") == null) {
-                    setThreadGlobals("IIDF_PARENT_TABLES", fnIIDFGetParentTable(getLuType().luName));
-                } else {
-                    HashMap<String, HashSet<String>> prntTable = (HashMap<String, HashSet<String>>) getThreadGlobals("IIDF_PARENT_TABLES");
-                    if (prntTable != null && !prntTable.isEmpty()) {
-                        parentsList = prntTable.get(tableName);
-                    }
-                }
-                if (parentsList != null) {
-                    for (String table : parentsList) {
-                        if (getThreadGlobals("childCrossInsts" + table.toUpperCase()) != null) {
-                            setThreadGlobals("childCrossInsts" + tableName.toUpperCase(), "1");
-                            return true;
-                        }
-                    }
-                }
-            }
-        }
-        return false;
-    }
+	@type(DecisionFunction)
+	@out(name = "decision", type = Boolean.class, desc = "")
+	public static Boolean fnIIDFCheckExtractFromSourceInd() throws Exception {
+		if ((isFirstSync() || SyncMode.FORCE.toString().equalsIgnoreCase(getSyncMode())) && Boolean.parseBoolean(IIDF_EXTRACT_FROM_SOURCE)) {
+		    return true;
+		} else if (("true").equals(IIDF_EXTRACT_FROM_SOURCE)) {
+		    String tableName = getTableName();
+		    if (tableName == null) tableName = "";
+		    Set<String> parentsList = new HashSet<>();
+		    if (getThreadGlobals("childCrossInsts" + tableName.toUpperCase()) != null) {
+		        return true;
+		    } else {
+		        if (getThreadGlobals("IIDF_PARENT_TABLES") == null) {
+		            setThreadGlobals("IIDF_PARENT_TABLES", fnIIDFGetParentTable(getLuType().luName));
+		        } else {
+		            HashMap<String, HashSet<String>> prntTable = (HashMap<String, HashSet<String>>) getThreadGlobals("IIDF_PARENT_TABLES");
+		            if (prntTable != null && !prntTable.isEmpty()) {
+		                parentsList = prntTable.get(tableName);
+		            }
+		        }
+		        if (parentsList != null) {
+		            for (String table : parentsList) {
+		                if (getThreadGlobals("childCrossInsts" + table.toUpperCase()) != null) {
+		                    setThreadGlobals("childCrossInsts" + tableName.toUpperCase(), "1");
+		                    return true;
+		                }
+		            }
+		        }
+		    }
+		}
+		return false;
+	}
 
 
     public static void fnIIDFUpdateStats(Object statsMapInp) throws Exception {

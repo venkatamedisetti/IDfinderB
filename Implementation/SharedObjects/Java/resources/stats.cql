@@ -1,4 +1,4 @@
-﻿CREATE TABLE k2view_customer.lu_stats ( 
+CREATE TABLE k2view_customer.lu_stats ( 
     job_run_seq bigint, 
     operation_name text, 
     last_update_time timestamp, 
@@ -7,13 +7,7 @@
     PRIMARY KEY (job_run_seq, operation_name, last_update_time) 
 ) WITH CLUSTERING ORDER BY (operation_name ASC, last_update_time ASC); 
  
-CREATE TABLE k2view_customer.get_jobs_failed_iids ( 
-    iid text, 
-    failed_time timestamp, 
-    failure_reason text, 
-    full_error_msg text, 
-    PRIMARY KEY (iid, failed_time) 
-); 
+
  
 CREATE TABLE k2view_customer.iid_stats ( 
     iid text, 

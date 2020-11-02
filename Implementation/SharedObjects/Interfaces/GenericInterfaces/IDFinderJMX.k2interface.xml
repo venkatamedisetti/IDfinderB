@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GenericInterface xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="CUSTOM" displayName="Custom" enabled="true" version="1.2">
+  <Name>IDFinderJMX</Name>
+  <Properties>
+    <Property name="Host" dataType="string">
+      <Value>localhost</Value>
+    </Property>
+    <Property name="Port" dataType="integer">
+      <Value>8198</Value>
+    </Property>
+    <Property name="User" dataType="string">
+      <Value>admin</Value>
+    </Property>
+    <Property name="Password" dataType="password">
+      <Value>8HqXq2xmiZIipcYEb8mno7JJJL7sOyfNmSkVyGwPuPs=:mEfPpVXWFR7xi+NI+tmIN4M7GbiizwNqbL4Z5WhuS64=</Value>
+    </Property>
+    <Property name="Data" dataType="string" multiLine="true">
+      <Value />
+    </Property>
+  </Properties>
+  <TestConnection enabled="false" />
+</GenericInterface>

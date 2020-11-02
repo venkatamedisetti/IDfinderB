@@ -67,7 +67,15 @@
         </xs:complexType>
       </xs:element>
     </xs:schema>
-    <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" />
+    <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+      <DocumentElement>
+        <trnIIDFExecNonLUTableDelta diffgr:id="trnIIDFExecNonLUTableDelta1" msdata:rowOrder="0">
+          <TABLE_NAME>CRM_CASES</TABLE_NAME>
+          <SKIP>true</SKIP>
+          <ACTIVE>true</ACTIVE>
+        </trnIIDFExecNonLUTableDelta>
+      </DocumentElement>
+    </diffgr:diffgram>
   </TranslationData>
   <DataRowsHeight>20</DataRowsHeight>
 </Translation>

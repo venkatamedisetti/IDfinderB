@@ -2,7 +2,7 @@
 <TablePopulationObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ID>query_public_contact_link</ID>
   <PopulationObjectName>query_public_contact_link</PopulationObjectName>
-  <TableName>contact_link</TableName>
+  <TableName>crm_contact_link</TableName>
   <RootItemID>query_query_public_contact_link</RootItemID>
   <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
     <TruncateBeforeSync>false</TruncateBeforeSync>
@@ -30,18 +30,18 @@
     </Item>
   </ItemsList>
   <LinksList>
-    <Link partId="8" fromNodeOrder="0" fromItemID="query_query_public_contact_link" fromColID="queryCol_0" toItemID="tbl_contact_link" toColID="tblCol_b6d4fe660f8b41acabadc687228ac41e" />
-    <Link partId="9" fromNodeOrder="0" fromItemID="query_query_public_contact_link" fromColID="queryCol_1" toItemID="tbl_contact_link" toColID="tblCol_5cb7a97acc6e486cb9174e6e4ebbe5aa" />
+    <Link partId="8" fromNodeOrder="0" fromItemID="query_query_public_contact_link" fromColID="queryCol_0" toItemID="tbl_crm_contact_link" toColID="tblCol_b6d4fe660f8b41acabadc687228ac41e" />
+    <Link partId="9" fromNodeOrder="0" fromItemID="query_query_public_contact_link" fromColID="queryCol_1" toItemID="tbl_crm_contact_link" toColID="tblCol_5cb7a97acc6e486cb9174e6e4ebbe5aa" />
   </LinksList>
   <ModeKeyColumnIDs />
   <DiagramGraph>
-    <Graph name="contact_link.query_public_contact_link.k2tablePop.xml" lastPartID="21">
-      <TableNode partID="0" name="contact_link" pos="383 5.890629" width="253" />
-      <DBQueryNode partID="5" name="CRM_DB" pos="10 0.9270859" size="253 84.14583" isRoot="true">
+    <Graph name="crm_contact_link.query_public_contact_link.k2tablePop.xml" lastPartID="15">
+      <TableNode partID="0" name="crm_contact_link" pos="404 30" width="253" />
+      <DBQueryNode partID="5" name="CRM_DB" pos="21 30.50911" size="253 84.14583" isRoot="true">
         <DBQuery>{"Name":"query_public_contact_link","ID":"query_query_public_contact_link","ConnName":"CRM_DB","SQL":"SELECT * FROM public.contact_link","ColumnsList":[{"ID":"queryCol_0","Name":"customer_id","DataType":"Integer","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"contact_id","DataType":"Integer","Index":1,"IsInputArgument":true}]}</DBQuery>
       </DBQueryNode>
-      <Link partID="8" from="0" to="1" pointsArr="263 36.9635429 273 36.9635429 313 37 333 37 373 36.9270859 383 36.9270859" fromNodePartID="5" fromNodeColumnName="customer_id" toNodePartID="0" toNodeColumnName="customer_id" />
-      <Link partID="9" from="2" to="3" pointsArr="263 49.03646 273 49.03646 313 49 333 49 373 49 383 49" fromNodePartID="5" fromNodeColumnName="contact_id" toNodePartID="0" toNodeColumnName="contact_id" />
+      <Link partID="8" from="0" to="1" pointsArr="274 66.54556 284 66.54556 394 61.0364571 404 61.0364571" fromNodePartID="5" fromNodeColumnName="customer_id" toNodePartID="0" toNodeColumnName="customer_id" />
+      <Link partID="9" from="2" to="3" pointsArr="274 78.6184845 284 78.6184845 394 73.109375 404 73.109375" fromNodePartID="5" fromNodeColumnName="contact_id" toNodePartID="0" toNodeColumnName="contact_id" />
     </Graph>
   </DiagramGraph>
 </TablePopulationObject>

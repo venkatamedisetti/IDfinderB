@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TableObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Name>contact</Name>
-  <ID>tbl_contact</ID>
+  <Name>crm_contact</Name>
+  <ID>tbl_crm_contact</ID>
   <Columns>
     <Column name="contact_id" id="tblCol_fe960496383a4c41afc4e5f24529bb06" index="0" datatype="Integer" mandatory="true" />
     <Column name="first_name" id="tblCol_b28065b3778e4013b50b6a51fd186de3" index="1" datatype="Text" />

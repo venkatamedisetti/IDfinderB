@@ -127,6 +127,13 @@
           <function_name>fnPostOrderCheck</function_name>
           <global_value></global_value>
         </trnExecUserActivity>
+        <trnExecUserActivity diffgr:id="trnExecUserActivity3" msdata:rowOrder="2">
+          <table_name>CRM_CASES</table_name>
+          <post_exec>false</post_exec>
+          <global_name></global_name>
+          <function_name>fnCheckCaseDate</function_name>
+          <global_value></global_value>
+        </trnExecUserActivity>
       </DocumentElement>
     </diffgr:diffgram>
   </TranslationData>

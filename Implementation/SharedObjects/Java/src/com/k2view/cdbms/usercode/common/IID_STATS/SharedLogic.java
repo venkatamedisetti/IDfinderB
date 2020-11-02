@@ -54,8 +54,8 @@ public class SharedLogic {
 		    }	
 		}
 		fnGetIIDStats(jobRunSeq);
-		fnGetIIDFinderStats(jobRunSeq);
-		fnGeLUDeltaTopicInfo(jobRunSeq);
+		//fnGetIIDFinderStats(jobRunSeq);
+		//fnGeLUDeltaTopicInfo(jobRunSeq);
 	}
 
 
@@ -117,8 +117,8 @@ public class SharedLogic {
 		    Process p = null;
 		
 		    try {
-		        p = Runtime.getRuntime().exec(new String[]{"bash", "-c", PATH_TO_KAFKA_BIN + "kafka-consumer-groups --bootstrap-server " + IifProperties.getInstance().getKafkaBootsrapServers() + " --describe --group IDfinderGroupId_" + clustName + SSL + "|grep -w -E '" + LuTopicsList.toString() + "'|awk '{consume += $3} {offset += $4} {lag += $5}END {print consume,offset,lag}'"});
-		        p.waitFor();
+		       // p = Runtime.getRuntime().exec(new String[]{"bash", "-c", PATH_TO_KAFKA_BIN + "kafka-consumer-groups --bootstrap-server " + IifProperties.getInstance().getKafkaBootsrapServers() + " --describe --group IDfinderGroupId_" + clustName + SSL + "|grep -w -E '" + LuTopicsList.toString() + "'|awk '{consume += $3} {offset += $4} {lag += $5}END {print consume,offset,lag}'"});
+		       // p.waitFor();
 		        isr = new InputStreamReader(p.getInputStream());
 		        isrErr = p.getErrorStream();
 		        if (isrErr.available() > 0) {
